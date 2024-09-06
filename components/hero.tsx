@@ -11,10 +11,12 @@ export default function Hero() {
         <div className="px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
               <div className="text-center pb-12 md:pb-0">
-                <h1 className="font-mono text-4xl md:text-7xl font-bold from-zinc-500 via-zinc-900 to-zinc-900 pb-4 leading-none">
-                  JAMEEL INDEX<br></br><span className="text-4xl leading-none font-mono">FOR FOOD TRADE AND VULNERABILITY</span>
-                </h1>
-                <p className="text-lg text-zinc-500 mb-8">
+              <h1 className="font-mono text-4xl md:text-7xl font-bold text-black pb-4 leading-none">
+  <span className="block">JAMEEL INDEX</span>
+  <span className="text-4xl font-mono mt-0 block">FOR FOOD TRADE AND VULNERABILITY</span>
+</h1>
+
+      <p className="text-2xl text-zinc-500 mb-8">
                 We measure global food security vulnerability, dependence on global trade, and regional threats impacting food goods' trade.
                 </p>
 
