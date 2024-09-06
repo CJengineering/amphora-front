@@ -1,9 +1,10 @@
 import Image from 'next/image'
-import FeatureImage01 from '@/public/images/feature-post-01.png'
-import FeatureImage02 from '@/public/images/feature-post-02.png'
-import FeatureImage03 from '@/public/images/feature-post-03.png'
-import FeatureImage04 from '@/public/images/feature-post-04.png'
-import FeatureImage05 from '@/public/images/feature-post-05.png'
+import FeatureImage01 from '@/public/images/J-WAFS.png'
+import FeatureImage02 from '@/public/images/IFPRI.png'
+import FeatureImage03 from '@/public/images/OXFORD.png'
+import FeatureImage04 from '@/public/images/UAEU.png'
+import FeatureImage05 from '@/public/images/CSU.png'
+import FeatureImage06 from '@/public/images/CJ.png'
 
 export default function Features02() {
   return (
@@ -11,11 +12,19 @@ export default function Features02() {
       <div className="py-12 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="relative max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="font-inter-tight text-3xl md:text-4xl font-bold text-zinc-900 mb-4">AI-powered features and effects</h2>
-            <p className="text-lg text-zinc-500">Whenever you are ready, just hit publish to turn your site sketches into an actual designs. No creating, no skills, no reshaping.</p>
+            <h2 className="font-mono text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Partners</h2>
+            <p className="text-lg text-zinc-500">The Jameel Index is built by experts from global academic and research institutions specialised in agriculture, nutrition, and food systems.</p>
           </div>
+          
           <div className="max-w-xs mx-auto sm:max-w-none grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-4 lg:gap-8">
-            <article className="sm:col-span-2 flex flex-col border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.zinc.50))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] rounded-lg">
+          <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage01} width={342} height={280} alt="J-WAFS logo" />
+          <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage02} width={342} height={280} alt="IFPRI logo" />
+          <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage03} width={342} height={280} alt="Oxford University logo" />
+          <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage04} width={342} height={280} alt="United Arab Emirates University logo" />
+          <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage05} width={342} height={280} alt="Colorado State University logo" />
+          <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage06} width={342} height={280} alt="Community Jameel logo" />
+
+            {/* <article className="sm:col-span-2 flex flex-col border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.zinc.50))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] rounded-lg">
               <div className="grow flex flex-col p-5 pt-6">
                 <div className="flex items-center space-x-3 mb-1">
                   <svg className="inline-flex fill-zinc-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
@@ -84,7 +93,7 @@ export default function Features02() {
               <figure>
                 <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage05} width={342} height={280} alt="Feature Post 05" />
               </figure>
-            </article>
+            </article> */}
           </div>
         </div>
       </div>

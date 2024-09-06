@@ -45,7 +45,7 @@ export default function Features03() {
                     <path d="m7.951 14.537 6.296-7.196 1.506 1.318-7.704 8.804-3.756-3.756 1.414-1.414 2.244 2.244Zm11.296-7.196 1.506 1.318-7.704 8.804-1.756-1.756 1.414-1.414.244.244 6.296-7.196Z" />
                   </svg>
                   <div>
-                    <div className="font-inter-tight text-lg font-semibold text-zinc-200 mb-1">Make designs feel real</div>
+                    <div className="font-inter-tight text-lg font-semibold text-zinc-200 mb-1">Global food demand</div>
                     <div className="text-zinc-500">Save time and keep things consistent with reusable images, and 3D assets in shared libraries.</div>
                   </div>
                 </button>

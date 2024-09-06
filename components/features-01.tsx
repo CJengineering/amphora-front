@@ -4,7 +4,10 @@ import { useState, useRef, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import Image from 'next/image'
 import FeatureIllustration from '@/public/images/feature-illustration.png'
-import FeatureImage01 from '@/public/images/feature-01.png'
+import FeatureImage01 from '@/public/images/GLOBAL_FOOD_DEMAND.png'
+import FeatureImage02 from '@/public/images/SUPPLY_BALANCE.png'
+import FeatureImage03 from '@/public/images/BILATERAL_TRADE.png'
+import FeatureImage04 from '@/public/images/CLIMATE_CHANGE.png'
 
 export default function Features01() {
 
@@ -25,8 +28,8 @@ export default function Features01() {
       <div className="py-12 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center pb-12">
-            <h2 className="font-inter-tight text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Go further than the speed of thought</h2>
-            <p className="text-lg text-zinc-500">AI reads and understands your designs, and with nothing more than a single line of feedback, perform complex actions autonomously.</p>
+            <h2 className="font-mono text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Bridging knowledge gaps on how climate scenarios affect global food security</h2>
+            <p className="text-lg text-zinc-500">To better understand and analyse food security, the Jameel Index measures countries' dependence on global food trade and imports, looking at regional-scale threats to see how they affect trade across diverse geographic regions</p>
           </div>
           <div>
             {/* Tabs buttons */}
@@ -36,48 +39,48 @@ export default function Features01() {
                 onClick={(e) => { e.preventDefault(); setTab(1); }}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <div className="font-inter-tight font-semibold text-zinc-900">AI Effects</div>
+                  <div className="font-mono font-semibold text-zinc-900">Global food demand</div>
                   <svg className={`fill-zinc-400 shrink-0 ml-2 ${tab !== 1 ? 'hidden' : ''}`} xmlns="http://www.w3.org/2000/svg" width="10" height="10">
                     <path d="M8.667.186H2.675a.999.999 0 0 0 0 1.998h3.581L.971 7.469a.999.999 0 1 0 1.412 1.412l5.285-5.285v3.58a.999.999 0 1 0 1.998 0V1.186a.999.999 0 0 0-.999-.999Z" />
                   </svg>
                 </div>
-                <div className="text-sm text-zinc-500">Visually structure your designs and structure them easily.</div>
+                <div className="text-sm text-zinc-500">Measures worldwide need for food imports.</div>
               </button>
               <button
                 className={`text-left px-4 py-5 border border-transparent rounded ${tab !== 2 ? 'bg-zinc-100 opacity-60 hover:opacity-100 transition' : '[background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] shadow-sm rotate-1'}`}
                 onClick={(e) => { e.preventDefault(); setTab(2); }}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <div className="font-inter-tight font-semibold text-zinc-900">Creative Mode</div>
+                  <div className="font-mono font-semibold text-zinc-900">Supply balance</div>
                   <svg className={`fill-zinc-400 shrink-0 ml-2 ${tab !== 2 ? 'hidden' : ''}`} xmlns="http://www.w3.org/2000/svg" width="10" height="10">
                     <path d="M8.667.186H2.675a.999.999 0 0 0 0 1.998h3.581L.971 7.469a.999.999 0 1 0 1.412 1.412l5.285-5.285v3.58a.999.999 0 1 0 1.998 0V1.186a.999.999 0 0 0-.999-.999Z" />
                   </svg>
                 </div>
-                <div className="text-sm text-zinc-500">Visually structure your designs and structure them easily.</div>
+                <div className="text-sm text-zinc-500">Assesses the equilibrium between food imports and exports.</div>
               </button>
               <button
                 className={`text-left px-4 py-5 border border-transparent rounded ${tab !== 3 ? 'bg-zinc-100 opacity-60 hover:opacity-100 transition' : '[background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] shadow-sm rotate-1'}`}
                 onClick={(e) => { e.preventDefault(); setTab(3); }}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <div className="font-inter-tight font-semibold text-zinc-900">Realistic Images</div>
+                  <div className="font-mono font-semibold text-zinc-900">Bi-lateral trade</div>
                   <svg className={`fill-zinc-400 shrink-0 ml-2 ${tab !== 3 ? 'hidden' : ''}`} xmlns="http://www.w3.org/2000/svg" width="10" height="10">
                     <path d="M8.667.186H2.675a.999.999 0 0 0 0 1.998h3.581L.971 7.469a.999.999 0 1 0 1.412 1.412l5.285-5.285v3.58a.999.999 0 1 0 1.998 0V1.186a.999.999 0 0 0-.999-.999Z" />
                   </svg>
                 </div>
-                <div className="text-sm text-zinc-500">Visually structure your designs and structure them easily.</div>
+                <div className="text-sm text-zinc-500">Tracks direct food trade between two countries.</div>
               </button >
               <button
                 className={`text-left px-4 py-5 border border-transparent rounded ${tab !== 4 ? 'bg-zinc-100 opacity-60 hover:opacity-100 transition' : '[background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] shadow-sm rotate-1'}`}
                 onClick={(e) => { e.preventDefault(); setTab(4); }}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <div className="font-inter-tight font-semibold text-zinc-900">Powerful Plugins</div>
+                  <div className="font-mono font-semibold text-zinc-900">Climate change</div>
                   <svg className={`fill-zinc-400 shrink-0 ml-2 ${tab !== 4 ? 'hidden' : ''}`} xmlns="http://www.w3.org/2000/svg" width="10" height="10">
                     <path d="M8.667.186H2.675a.999.999 0 0 0 0 1.998h3.581L.971 7.469a.999.999 0 1 0 1.412 1.412l5.285-5.285v3.58a.999.999 0 1 0 1.998 0V1.186a.999.999 0 0 0-.999-.999Z" />
                   </svg>
                 </div>
-                <div className="text-sm text-zinc-500">Visually structure your designs and structure them easily.</div>
+                <div className="text-sm text-zinc-500">Evaluates climate’s impact on global food trade and production.</div>
               </button >
             </div>
             {/* Tabs items */}
@@ -97,8 +100,8 @@ export default function Features01() {
                   unmount={false}                      
                 >
                   <div className="inline-flex relative align-top">
-                    <Image className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src={FeatureImage01} width={600} height={360} alt="Feature 01" />
-                    <Image className="absolute top-0 left-full -translate-x-[70%] -mr-20 max-md:w-[45%]" src={FeatureIllustration} width={273} height={288} alt="Illustration" aria-hidden="true" />
+                    <Image className="rounded" src={FeatureImage01} width={600} height={360} alt="Feature 01" />
+                    {/* <Image className="absolute top-0 left-full -translate-x-[70%] -mr-20 max-md:w-[45%]" src={FeatureIllustration} width={273} height={288} alt="Illustration" aria-hidden="true" /> */}
                   </div>
                 </Transition>
                 {/* Item 2 */}
@@ -115,8 +118,8 @@ export default function Features01() {
                   unmount={false}                      
                 >
                   <div className="inline-flex relative align-top">
-                    <Image className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src={FeatureImage01} width={600} height={360} alt="Feature 02" />
-                    <Image className="absolute top-0 left-full -translate-x-[70%] -mr-20 max-md:w-[45%]" src={FeatureIllustration} width={273} height={288} alt="Illustration" aria-hidden="true" />
+                    <Image className="rounded" src={FeatureImage02} width={600} height={360} alt="Feature 02" />
+                    {/* <Image className="absolute top-0 left-full -translate-x-[70%] -mr-20 max-md:w-[45%]" src={FeatureIllustration} width={273} height={288} alt="Illustration" aria-hidden="true" /> */}
                   </div>
                 </Transition>
                 {/* Item 3 */}
@@ -133,8 +136,8 @@ export default function Features01() {
                   unmount={false}                      
                 >
                   <div className="inline-flex relative align-top">
-                    <Image className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src={FeatureImage01} width={600} height={360} alt="Feature 03" />
-                    <Image className="absolute top-0 left-full -translate-x-[70%] -mr-20 max-md:w-[45%]" src={FeatureIllustration} width={273} height={288} alt="Illustration" aria-hidden="true" />
+                    <Image className="rounded" src={FeatureImage03} width={600} height={360} alt="Feature 03" />
+                    {/* <Image className="absolute top-0 left-full -translate-x-[70%] -mr-20 max-md:w-[45%]" src={FeatureIllustration} width={273} height={288} alt="Illustration" aria-hidden="true" /> */}
                   </div>
                 </Transition>
                 {/* Item 4 */}
@@ -151,8 +154,8 @@ export default function Features01() {
                   unmount={false}                      
                 >
                   <div className="inline-flex relative align-top">
-                    <Image className="rounded-t-lg border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] box-content shadow-2xl" src={FeatureImage01} width={600} height={360} alt="Feature 04" />
-                    <Image className="absolute top-0 left-full -translate-x-[70%] -mr-20 max-md:w-[45%]" src={FeatureIllustration} width={273} height={288} alt="Illustration" aria-hidden="true" />
+                    <Image className="rounded" src={FeatureImage04} width={600} height={360} alt="Feature 04" />
+                    {/* <Image className="absolute top-0 left-full -translate-x-[70%] -mr-20 max-md:w-[45%]" src={FeatureIllustration} width={273} height={288} alt="Illustration" aria-hidden="true" /> */}
                   </div>
                 </Transition>
               </div>
