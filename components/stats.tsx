@@ -10,12 +10,12 @@ export default function Stats() {
 
   const stats: StatProps[] = [
     {
-      number: 476,
-      suffix: 'K',
+      number: 163,
+      suffix: 'k',
       text: 'Assets packed with power beyond your imagination.',
     },
     {
-      number: 1.44,
+      number: 1,
       suffix: 'K',
       text: 'Assets packed with power beyond your imagination.',
     },
