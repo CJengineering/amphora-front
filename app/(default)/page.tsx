@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      
       <Features01 />
       <Features02 />
       <Features03 />
