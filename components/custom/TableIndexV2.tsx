@@ -68,138 +68,161 @@ const checkColumnName = (name: string) => {
 };
 const columnHelper = createColumnHelper<CountryData>();
 const columns = [
-    columnHelper.accessor("nation", {
-      header: () => <div className="mr-2 uppercase font-mono">Country</div>,
-      cell: (info) => info.getValue(),
-    }),
-    columnHelper.accessor("overallScore", {
-      header: () => (
-        <div className="font-mono uppercase hidden md:block ">OVERALL</div>
-      ),
-      cell: (info) => (
-        <div className={`${getBgColorPercentage(info.getValue())} py-4 `}>
-         
-          {createPercent(info.getValue())}
-        </div>
-      ),
-    }),
-    columnHelper.accessor("jameelIndex", {
-      header: () => <div className="font-mono uppercase "> JIS</div>,
-      cell: (info) => (
-        <div className={`${getBgColorString(info.getValue())} p-4 `}>
-          {info.getValue()}
-        </div>
-      ),
-    }),
-    columnHelper.accessor("foodIm", {
-      header: () => (
+  columnHelper.accessor("nation", {
+    header: () => <div className="mr-2 uppercase font-mono">Country</div>,
+    cell: (info) => info.getValue(),
+  }),
+  columnHelper.accessor("overallScore", {
+    header: () => (
+      <div className="font-mono uppercase hidden md:block ">OVERALL</div>
+    ),
+    cell: (info) => (
+      <div className={`${getBgColorPercentage(info.getValue())} p-4 `}>
+        {createPercent(info.getValue())}
+      </div>
+    ),
+  }),
+  columnHelper.accessor("jameelIndex", {
+    header: () => (
         <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group">
-          <GlobeAltIcon className="h-4" />
-          <span>FID</span>
-          <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-            <p className="font-bold normal-case">Food Import Dependency</p>
-            <p className="text-xs normal-case">Measures the percentage of a country's food demand met through imports.</p>
-          </div>
+       
+        <span>JIS</span>
+        <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+          <p className=" normal-case">Jameel Index</p>
+          <p className="text-xs normal-case">
+            Measures the percentage of a country's food demand met through
+            imports.
+          </p>
         </div>
-      ),
-      cell: (info) => (
-        <div className={`${getBgColor(info.getValue())} p-4`}>
-          {info.getValue()}
+      </div>
+    ),
+    cell: (info) => (
+      <div className={`${getBgColorString(info.getValue())} p-4 `}>
+        {info.getValue()}
+      </div>
+    ),
+  }),
+  columnHelper.accessor("foodIm", {
+    header: () => (
+      <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group">
+        <GlobeAltIcon className="h-4" />
+        <span>FID</span>
+        <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+          <p className=" normal-case">Food Import Dependency</p>
+          <p className="text-xs normal-case">
+            Measures the percentage of a country's food demand met through
+            imports.
+          </p>
         </div>
-      ),
-    }),
-    columnHelper.accessor("feedIm", {
-      header: () => (
-        <div className="relative hidden md:flex uppercase font-mono items-center space-x-2 group">
-          <CircleStackIcon className="h-4" />
-          <span>AID</span>
-          <div className="absolute z-20 hidden group-hover:block top-[-70px] left-0 w-[300px]  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-            <p className="font-bold normal-case">Animal Feed Import Dependency</p>
-            <p className="text-xs normal-case">Tracks the percentage of animal feed demand met by imports.</p>
-          </div>
+      </div>
+    ),
+    cell: (info) => (
+      <div className={`${getBgColor(info.getValue())} p-4`}>
+        {info.getValue()}
+      </div>
+    ),
+  }),
+  columnHelper.accessor("feedIm", {
+    header: () => (
+      <div className="relative hidden md:flex uppercase font-mono items-center space-x-2 group">
+        <CircleStackIcon className="h-4" />
+        <span>AID</span>
+        <div className="absolute z-20 hidden group-hover:block top-[-70px] left-0 w-[300px]  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+          <p className=" normal-case">Animal Feed Import Dependency</p>
+          <p className="text-xs normal-case">
+            Tracks the percentage of animal feed demand met by imports.
+          </p>
         </div>
-      ),
-      cell: (info) => (
-        <div className={`${getBgColor(info.getValue())} py-4`}>
-          {info.getValue()}
+      </div>
+    ),
+    cell: (info) => (
+      <div className={`${getBgColor(info.getValue())} p-4`}>
+        {info.getValue()}
+      </div>
+    ),
+  }),
+  columnHelper.accessor("forExch", {
+    header: () => (
+      <div className="relative hidden md:flex items-center space-x-2 group">
+        <ChartBarIcon className="h-4" />
+        <span>FER</span>
+        <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+          <p className=" normal-case">Food Import to Export Ratio</p>
+          <p className="text-xs normal-case">
+            Compares the value of food imports to a country's total export
+            value.
+          </p>
         </div>
-      ),
-    }),
-    columnHelper.accessor("forExch", {
-      header: () => (
-        <div className="relative hidden md:flex items-center space-x-2 group">
-          <ChartBarIcon className="h-4" />
-          <span>FER</span>
-          <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-            <p className="font-bold normal-case">Food Import to Export Ratio</p>
-            <p className="text-xs normal-case">Compares the value of food imports to a country's total export value.</p>
-          </div>
-        </div>
-      ),
-      cell: (info) => (
-        <div className={`${getBgColor(info.getValue())} py-4`}>
-          {info.getValue()}
-        </div>
-      ),
-    }),
-    columnHelper.accessor("supplyReliab", {
-      header: () => (
-        <div className="relative hidden md:flex items-center space-x-2 group">
-          <UsersIcon className="h-4" />
-          <span>KFTP</span>
-          <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-            <p className="font-bold normal-case">Key Food Trade Partners</p>
+      </div>
+    ),
+    cell: (info) => (
+      <div className={`${getBgColor(info.getValue())} p-4`}>
+        {info.getValue()}
+      </div>
+    ),
+  }),
+  columnHelper.accessor("supplyReliab", {
+    header: () => (
+      <div className="relative hidden md:flex items-center space-x-2 group">
+        <UsersIcon className="h-4" />
+        <span>KFTP</span>
+        <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+          <p className="normal-case">Key Food Trade Partners</p>
 
-
-
-
-            <p className="text-xs normal-case">Counts the number of trade partners supplying 80% of food imports.</p>
-          </div>
+          <p className="text-xs normal-case">
+            Counts the number of trade partners supplying 80% of food imports.
+          </p>
         </div>
-      ),
-      cell: (info) => (
-        <div className={`${getBgColor(info.getValue())} py-4`}>
-          {info.getValue()}
+      </div>
+    ),
+    cell: (info) => (
+      <div className={`${getBgColor(info.getValue())} p-4`}>
+        {info.getValue()}
+      </div>
+    ),
+  }),
+  columnHelper.accessor("supplyRoboost", {
+    header: () => (
+      <div className="relative hidden md:flex uppercase font-mono items-center space-x-2 group">
+        <ArrowTrendingUpIcon className="h-4" />
+        <span>CYV</span>
+        <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+          <p className="font-bold normal-case">Annual Crop Yield Variability</p>
+          <p className="text-xs normal-case">
+            Assesses the annual fluctuation in crop yields for a country.
+          </p>
         </div>
-      ),
-    }),
-    columnHelper.accessor("supplyRoboost", {
-      header: () => (
-        <div className="relative hidden md:flex uppercase font-mono items-center space-x-2 group">
-          <ArrowTrendingUpIcon className="h-4" />
-          <span>CYV</span>
-          <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-            <p className="font-bold normal-case">Annual Crop Yield Variability</p>
-            <p className="text-xs normal-case">Assesses the annual fluctuation in crop yields for a country.</p>
-          </div>
+      </div>
+    ),
+    cell: (info) => (
+      <div className={`${getBgColor(info.getValue())} p-4`}>
+        {info.getValue()}
+      </div>
+    ),
+  }),
+  columnHelper.accessor("climatePolicy", {
+    header: () => (
+      <div className="relative flex items-center uppercase font-mono space-x-2 group">
+        <CloudIcon className="h-4" />
+        <span>FTI</span>
+        <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+          <p className="font-bold normal-case">
+            Food Shipment Emission Tax Impact
+          </p>
+          <p className="text-xs normal-case">
+            Evaluates the effect of greenhouse gas emission taxes on food
+            shipment costs.
+          </p>
         </div>
-      ),
-      cell: (info) => (
-        <div className={`${getBgColor(info.getValue())} p-4`}>
-          {info.getValue()}
-        </div>
-      ),
-    }),
-    columnHelper.accessor("climatePolicy", {
-      header: () => (
-        <div className="relative flex items-center uppercase font-mono space-x-2 group">
-          <CloudIcon className="h-4" />
-          <span>FTI</span>
-          <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-            <p className="font-bold normal-case">Food Shipment Emission Tax Impact</p>
-            <p className="text-xs normal-case">Evaluates the effect of greenhouse gas emission taxes on food shipment costs.</p>
-          </div>
-        </div>
-      ),
-      cell: (info) => (
-        <div className={`${getBgColor(info.getValue())} p-4`}>
-          {info.getValue()}
-        </div>
-      ),
-    }),
-  ];
-  
-  
+      </div>
+    ),
+    cell: (info) => (
+      <div className={`${getBgColor(info.getValue())} p-4`}>
+        {info.getValue()}
+      </div>
+    ),
+  }),
+];
 
 export default function TableIndexV2() {
   const [countries, setCountries] = useState<CountryData[]>([]);
@@ -475,11 +498,12 @@ export default function TableIndexV2() {
                         },
                       ].map((item, index) => (
                         <div className="flex" key={index}>
-           
-                          <div className="flex items-center pl-4   h-8 w-[70%] border  ">
+                          <div className="flex items-center  pl-4   h-8 w-[100%] border  ">
                             {item.header}
                           </div>
-                          <div className={`flex h-8 items-center justify-center ${item.bgColor} w-[30%] `}>
+                          <div
+                            className={`flex h-8 items-center justify-center ${item.bgColor} w-[30%] `}
+                          >
                             {item.value}
                           </div>
                         </div>
