@@ -273,6 +273,65 @@ export const metadata = {
           </div>
           {/* <div className="grid grid-cols-12 border-t border-zinc-200 mt-12"></div> */}
         </div>
+
+      </div>
+      <div className="pb-12 md:pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-4">
+      <div className="grid md:grid-cols-3 gap-8 md:gap-6 lg:gap-16 text-center">
+          <div className="pb-3 text-left">
+            <h3 className="font-mono text-lg font-bold pb-6">International Food Policy Research Insitute (IFPRI)</h3>
+          <ul>
+            <li className="pb-3"><h4>Keith Wiebe, Project Lead for IFPRI</h4></li>
+            <li className="pb-3"><h4>Sherwin Gabriel, Economist</h4></li>
+            <li className="pb-3"><h4>Faaiqa Hartley, Economist</h4></li>
+            <li className="pb-3"><h4>Rehab Osman, Macroeconomic Modeler</h4></li>
+            <li className="pb-3"><h4>Ricky Robertson, Crop Modeler</h4></li>
+            <li className="pb-3"><h4>Tim Sulser, Economist</h4></li>
+            <li className="pb-3"><h4>Tim Thomas, Economist</h4></li>
+            <li className="pb-3"><h4>Dirk Willenbockel, Macroeconomic Modeler</h4></li>
+          </ul>
+          </div>
+
+          <div className="pb-3 text-left">
+            <h3 className="font-mono text-lg font-bold pb-6">University of Oxford Martin School</h3>
+          <ul>
+            <li className="pb-3"><h4>Jim Hall, Project Lead for University of Oxford</h4></li>
+            <li className="pb-3"><h4>Sir Charles Godfray, Senior Advisor</h4></li>
+            <li className="pb-3"><h4>Anna Murgatroyd, Crop Modeler</h4></li>
+            <li className="pb-3"><h4>Jasper Verschuur, Infrastructure Modeler</h4></li>
+          </ul>
+          </div>
+
+          <div className="pb-3 text-left">
+            <h3 className="font-mono text-lg font-bold pb-6">Ethiopian Institute for Agriculture Research (EIAR)</h3>
+          <ul>
+            <li className="pb-3"><h4>Girma Mamo, Project Lead for EIAR</h4></li>
+            <li className="pb-3"><h4>Tadese Anberbir Aweke, Senior ICT and Digitalization Expert</h4></li>
+            <li className="pb-3"><h4>Samuel Diro Chalkaba, Economist</h4></li>
+            <li className="pb-3"><h4>Abu Tolcha Gari, Climate Change Modeler</h4></li>
+            <li className="pb-3"><h4>Tadele Mamom, Economist</h4></li>
+            <li className="pb-3"><h4>Tesfaye Solomon Eshetu, Economist</h4></li>
+          </ul>
+          </div>
+
+
+          <div className="pb-3 text-left">
+            <h3 className="font-mono text-lg font-bold pb-6">United Arab Emirates University</h3>
+          <ul>
+            <li className="pb-3"><h4>Eihab Fathelrahman, Agricultural Trade Modeler</h4></li>
+            <li className="pb-3"><h4>Raeda Osman, Graduate Fellow</h4></li>
+          </ul> 
+          </div>
+
+          
+          <div className="pb-3 text-left">
+            <h3 className="font-mono text-lg font-bold pb-6">Colorado State University</h3>
+          <ul>
+            <li className="pb-3"><h4>Dana Hoag, Senior Advisor</h4></li>
+          </ul> 
+          </div>
+       </div>
+      </div>
       </div>
 
 

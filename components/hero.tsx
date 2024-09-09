@@ -30,7 +30,7 @@ export default function Hero() {
           <div className="relative max-w-3xl mx-auto text-center pt-3 md:pt-6">
             <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <div>
-                <a className="btn text-lg font-mono font-bold text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/score-chart">Explore</a>
+                <a className="btn text-2xl font-mono text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/score-chart">EXPLORE</a>
               </div>
             </div>
           </div>
