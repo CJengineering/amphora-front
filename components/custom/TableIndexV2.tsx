@@ -48,7 +48,7 @@ const getBgColorString = (value: string) => {
   return "bg-very-low"; // dark orange for 5
 };
 const createPercent = (value: number) => {
-  const percent = value * 100;
+    const percent = Math.round(value * 100 * 100) / 100;
   return `${percent}%`;
 };
 
