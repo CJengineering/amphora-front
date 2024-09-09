@@ -134,6 +134,13 @@ export default function TableIndex() {
   useEffect(() => {
     setCountries(fakeCountries);
   }, []);
+  const changeCountryName = () => {
+    if (countries.length > 0) {
+      const updatedCountries = [...countries];
+      updatedCountries[0].nation = "Nigeria";
+      setCountries(updatedCountries);
+    }
+  };
 
   const toggleRowExpansion = (rowId: string) => {
     setExpandedRows((prev) => ({
@@ -165,6 +172,7 @@ export default function TableIndex() {
   return (
     <div>
      
+      
       <table className="min-w-full text-sm table-auto font-mono">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
