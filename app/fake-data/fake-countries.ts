@@ -1,10 +1,11 @@
-import { CountryData } from "@/components/custom/TableIndex";
+import { CountryData } from "../interfaces";
+
 
 export const fakeCountries: CountryData[] = [
   {
     nation: "Canada",
-    overallScore: "Very Low",
-    jameelIndex: 0.56,
+    overallScore: 1,
+    jameelIndex: '',
     foodIm: 4,
     feedIm: 3,
     forExch: 3,
@@ -14,8 +15,8 @@ export const fakeCountries: CountryData[] = [
     years: [
       {
         year: "2018",
-        overallScore: 'Very Low',
-        jameelIndex: 0.17,
+        overallScore: 1,
+        jameelIndex: '',
         foodIm: 3,
         feedIm: 5,
         forExch: 2,
@@ -25,8 +26,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2019",
-        overallScore: 'High',
-        jameelIndex: 0.11,
+        overallScore: 2,
+        jameelIndex: '',
         foodIm: 2,
         feedIm: 5,
         forExch: 3,
@@ -36,19 +37,22 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2020",
-        overallScore: 'Very Low',
-        jameelIndex: 0.44,
+        overallScore: 1,
+        jameelIndex:'',
         foodIm: 5,
         feedIm: 1,
         forExch: 1,
         supplyReliab: 3,
-        supplyRoboost: 4,
+        supplyRoboost:
+        
+        
+        4,
         climatePolicy: 4,
       },
       {
         year: "2021",
-        overallScore: 'Medium',
-        jameelIndex: 0.57,
+        overallScore: 3,
+        jameelIndex: '',
         foodIm: 4,
         feedIm: 2,
         forExch: 5,
@@ -58,8 +62,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2022",
-        overallScore: 'High',
-        jameelIndex: 0.21,
+        overallScore: 2,
+        jameelIndex: '',
         foodIm: 1,
         feedIm: 1,
         forExch: 5,
@@ -71,8 +75,8 @@ export const fakeCountries: CountryData[] = [
   },
   {
     nation: "Germany",
-    overallScore: "Medium",
-    jameelIndex: 0.93,
+    overallScore: 3,
+    jameelIndex: '',
     foodIm: 1,
     feedIm: 3,
     forExch: 4,
@@ -82,8 +86,8 @@ export const fakeCountries: CountryData[] = [
     years: [
       {
         year: "2018",
-        overallScore: 'Low',
-        jameelIndex: 0.8,
+        overallScore: 1,
+        jameelIndex: '',
         foodIm: 4,
         feedIm: 5,
         forExch: 5,
@@ -93,10 +97,11 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2019",
-        overallScore: 'High',
-        jameelIndex: 0.59,
+        overallScore: 2,
+        jameelIndex: '',
         foodIm: 1,
-        feedIm: 3,
+    feedIm: 3,
+
         forExch: 4,
         supplyReliab: 1,
         supplyRoboost: 1,
@@ -104,8 +109,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2020",
-        overallScore: 'Low',
-        jameelIndex: 0.65,
+        overallScore: 1,
+        jameelIndex: '',
         foodIm: 1,
         feedIm: 5,
         forExch: 4,
@@ -115,8 +120,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2021",
-        overallScore: 'Medium',
-        jameelIndex: 0.18,
+        overallScore: 3,
+        jameelIndex: '',
         foodIm: 1,
         feedIm: 1,
         forExch: 4,
@@ -126,8 +131,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2022",
-        overallScore: "Low",
-        jameelIndex: 0.24,
+        overallScore: 2,
+        jameelIndex: '',
         foodIm: 5,
         feedIm: 5,
         forExch: 3,
@@ -139,9 +144,10 @@ export const fakeCountries: CountryData[] = [
   },
   {
     nation: "Brazil",
-    overallScore: "Very Low",
-    jameelIndex: 0.98,
+    overallScore: 1,
+    jameelIndex: '',
     foodIm: 4,
+
     feedIm: 2,
     forExch: 1,
     supplyReliab: 3,
@@ -150,8 +156,8 @@ export const fakeCountries: CountryData[] = [
     years: [
       {
         year: "2018",
-        overallScore: 'High',
-        jameelIndex: 0.85,
+        overallScore: 2,
+        jameelIndex: '',
         foodIm: 2,
         feedIm: 5,
         forExch: 3,
@@ -161,8 +167,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2019",
-        overallScore: "Medium",
-        jameelIndex: 0.32,
+        overallScore: 3,
+        jameelIndex: '',
         foodIm: 2,
         feedIm: 5,
         forExch: 4,
@@ -172,21 +178,26 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2020",
-        overallScore: 'Low',
-        jameelIndex: 0.68,
+        overallScore: 2,
+        jameelIndex: '',
         foodIm: 5,
         feedIm: 3,
         forExch: 1,
+
+
+
         supplyReliab: 4,
         supplyRoboost: 3,
         climatePolicy: 1,
       },
       {
         year: "2021",
-        overallScore: 'High',
-        jameelIndex: 0.33,
+        overallScore: 2,
+        jameelIndex: '',
         foodIm: 4,
         feedIm: 3,
+
+
         forExch: 4,
         supplyReliab: 4,
         supplyRoboost: 2,
@@ -194,8 +205,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2022",
-        overallScore: 'Medium',
-        jameelIndex: 0.77,
+        overallScore: 3,
+        jameelIndex:'',
         foodIm: 4,
         feedIm: 3,
         forExch: 2,
@@ -207,8 +218,8 @@ export const fakeCountries: CountryData[] = [
   },
   {
     nation: "Australia",
-    overallScore: "Medium",
-    jameelIndex: 0.14,
+    overallScore: 3,
+    jameelIndex: '',
     foodIm: 1,
     feedIm: 5,
     forExch: 2,
@@ -218,8 +229,8 @@ export const fakeCountries: CountryData[] = [
     years: [
       {
         year: "2018",
-        overallScore: 'Low',
-        jameelIndex: 0.27,
+        overallScore: 2,
+        jameelIndex: "",
         foodIm: 4,
         feedIm: 4,
         forExch: 2,
@@ -229,8 +240,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2019",
-        overallScore: 'Medium',
-        jameelIndex: 0.48,
+        overallScore: 3,
+        jameelIndex: '',
         foodIm: 4,
         feedIm: 1,
         forExch: 4,
@@ -240,8 +251,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2020",
-        overallScore: 'High',
-        jameelIndex: 0.52,
+        overallScore: 2,
+        jameelIndex: '',
         foodIm: 4,
         feedIm: 2,
         forExch: 4,
@@ -251,8 +262,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2021",
-        overallScore: 'Low',
-        jameelIndex: 0.76,
+        overallScore: 1,
+        jameelIndex: '',
         foodIm: 5,
         feedIm: 3,
         forExch: 2,
@@ -262,8 +273,8 @@ export const fakeCountries: CountryData[] = [
       },
       {
         year: "2022",
-        overallScore: "Very Low",
-        jameelIndex: 0.63,
+        overallScore: 1,
+        jameelIndex: '',
 
 
         foodIm: 4,

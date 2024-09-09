@@ -6,3 +6,58 @@
 @import 'additional-styles/theme.css';
 
 @import 'tailwindcss/utilities';
+table {
+    border-collapse: collapse; /* Removes the spacing between table cells */
+    margin: 0; /* Removes any margin around the table */
+    padding: 0; /* Removes any padding inside the table */
+    width: 100%; /* Optional: make table span full width */
+  }
+  
+  table td, table th {
+    line-height: 1;
+    padding: 0; /* Removes padding inside table cells */
+    margin: 0;  /* Removes margin around table cells (if any) */
+  }
+
+  @keyframes shine {
+    0% {
+      border-left: 2px solid rgba(92, 92, 82, 0.5);
+      border-right: 2px solid rgba(92, 92, 82, 0.5);
+    }
+    50% {
+      border-left: 2px solid rgba(92, 92, 82, 1);
+      border-right: 2px solid rgba(92, 92, 82, 1);
+    }
+    100% {
+      border-left: 2px solid rgba(92, 92, 82, 0.5);
+      border-right: 2px solid rgba(92, 92, 82, 0.5);
+    }
+  }
+  
+  /* Apply the shine effect to headers and cells when sorted */
+
+  .sorted-cell {
+    border-left: 2px solid rgba(92, 92, 82, 0.5);
+    border-right: 2px solid rgba(92, 92, 82, 0.5);
+
+    animation: shine 1s infinite alternate; /* Shining animation for left and right borders */
+  }
+  .bg-very-low {
+    background-color: #96D64E;
+  }
+  
+  .bg-low {
+    background-color: #DAE951;
+  }
+  
+  .bg-medium {
+    background-color: #F0CD4B;
+  }
+  
+  .bg-high {
+    background-color: #D5843D;
+  }
+  
+  .bg-extreme {
+    background-color: #BE4238;
+  }
