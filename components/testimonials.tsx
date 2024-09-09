@@ -1,42 +1,42 @@
 'use client'
 import Testimonial from '@/components/testimonial'
-import TestimonialImg01 from '@/public/images/testimonial-01.jpg'
-import TestimonialImg02 from '@/public/images/testimonial-02.jpg'
-import TestimonialImg03 from '@/public/images/testimonial-03.jpg'
-import TestimonialImg04 from '@/public/images/testimonial-04.jpg'
-import TestimonialImg05 from '@/public/images/testimonial-05.jpg'
-import TestimonialImg06 from '@/public/images/testimonial-06.jpg'
-import TestimonialImg07 from '@/public/images/testimonial-07.jpg'
-import TestimonialImg08 from '@/public/images/testimonial-08.jpg'
+import GregImage from '@/public/images/research-team/greg-sixt.jpg'
+import KenImage from '@/public/images/research-team/kenneth-strzepek.jpg'
+import JoelImage from '@/public/images/advisory-committee/Joel-K-Bourne.png'
+import HowardImage from '@/public/images/advisory-committee/Howard-W-Buffett.png'
+import RamiImage from '@/public/images/advisory-committee/Rami-Zurayk.png'
+import LinusImage from '@/public/images/advisory-committee/Linus-Mofor.png'
+import TracyImage from '@/public/images/advisory-committee/Tracy-McVeigh.png'
+import FrankImage from '@/public/images/experts/Frank-Nti.jpg'
 
 export default function Testimonials() {
 
   const testimonials01 = [
     {
-      image: TestimonialImg01,
-      name: 'Chris Maynard',
-      user: 'Graduate Fellow',
+      image: FrankImage,
+      name: 'Frank Nti',
+      user: 'Agricultural Economist',
       link: '#0',
       content: '',
     },
     {
-      image: TestimonialImg02,
+      image: GregImage,
       name: 'Greg Sixt',
       user: 'Project Lead',
       link: '#0',
       content: '',
     },
     {
-      image: TestimonialImg03,
+      image: KenImage,
       name: 'Ken Strzepek',
       user: 'Technical Lead',
       link: '#0',
       content: '',
     },
     {
-      image: TestimonialImg04,
-      name: 'Dana Hoag',
-      user: 'Professor, Colorado State University',
+      image: HowardImage,
+      name: 'Howard W. Buffet',
+      user: 'Columnbia University',
       link: '#0',
       content: '',
     },
@@ -44,28 +44,28 @@ export default function Testimonials() {
 
   const testimonials02 = [
     {
-      image: TestimonialImg05,
+      image: LinusImage,
       name: 'Linus Mofo',
       user: 'African Climate Policy Centre',
       link: '#0',
       content: '',
     },
     {
-      image: TestimonialImg06,
-      name: 'Howard W. Buffet',
-      user: 'Columbia University',
-      link: '#0',
-      content: '',
-    },
-    {
-      image: TestimonialImg07,
+      image: JoelImage,
       name: 'Joel K. Bourne',
       user: 'National Geographic',
       link: '#0',
       content: '',
     },
     {
-      image: TestimonialImg08,
+      image: TracyImage,
+      name: 'Track McVeigh',
+      user: 'The Guardian',
+      link: '#0',
+      content: '',
+    },
+    {
+      image: RamiImage,
       name: 'Rami Zurayk',
       user: 'American University of Beirut',
       link: '#0',
@@ -127,7 +127,7 @@ export default function Testimonials() {
           <div className="relative max-w-3xl mx-auto text-center pt-3 md:pt-6">
             <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <div>
-                <a className="btn text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/request-demo">Meet the team</a>
+                <a className="btn font-mono text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/team">MEET THE TEAM</a>
               </div>
             </div>
           </div>

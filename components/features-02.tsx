@@ -4,7 +4,8 @@ import FeatureImage02 from '@/public/images/IFPRI.png'
 import FeatureImage03 from '@/public/images/OXFORD.png'
 import FeatureImage04 from '@/public/images/UAEU.png'
 import FeatureImage05 from '@/public/images/CSU.png'
-import FeatureImage06 from '@/public/images/CJ.png'
+import FeatureImage06 from '@/public/images/food-climate-alliance-logo-gold.png'
+import FeatureImage07 from '@/public/images/CJ.png'
 
 export default function Features02() {
   return (
@@ -16,13 +17,14 @@ export default function Features02() {
             <p className="text-lg text-zinc-500">The Jameel Index is built by experts from global academic and research institutions specialised in agriculture, nutrition, and food systems.</p>
           </div>
           
-          <div className="max-w-xs mx-auto sm:max-w-none grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-4 lg:gap-8">
+          <div className="max-w-xs mx-auto sm:max-w-none grid sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-4 lg:gap-8">
           <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage01} width={342} height={280} alt="J-WAFS logo" />
           <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage02} width={342} height={280} alt="IFPRI logo" />
           <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage03} width={342} height={280} alt="Oxford University logo" />
           <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage04} width={342} height={280} alt="United Arab Emirates University logo" />
           <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage05} width={342} height={280} alt="Colorado State University logo" />
-          <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage06} width={342} height={280} alt="Community Jameel logo" />
+          <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage06} width={342} height={280} alt="FACT Alliance logo" />
+          <Image className="h-[280px] object-cover object-left mx-auto sm:object-contain sm:h-auto" src={FeatureImage07} width={342} height={280} alt="Community Jameel logo" />
 
             {/* <article className="sm:col-span-2 flex flex-col border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.zinc.50))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] rounded-lg">
               <div className="grow flex flex-col p-5 pt-6">
