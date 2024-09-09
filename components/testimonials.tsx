@@ -17,28 +17,28 @@ export default function Testimonials() {
       name: 'Chris Maynard',
       user: 'Graduate Fellow',
       link: '#0',
-      content: 'Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.',
+      content: '',
     },
     {
       image: TestimonialImg02,
       name: 'Greg Sixt',
-      user: 'Technical Lead',
+      user: 'Project Lead',
       link: '#0',
-      content: 'Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.',
+      content: '',
     },
     {
       image: TestimonialImg03,
       name: 'Ken Strzepek',
       user: 'Technical Lead',
       link: '#0',
-      content: 'Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.',
+      content: '',
     },
     {
       image: TestimonialImg04,
       name: 'Dana Hoag',
       user: 'Professor, Colorado State University',
       link: '#0',
-      content: 'Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.',
+      content: '',
     },
   ]
 
@@ -48,28 +48,28 @@ export default function Testimonials() {
       name: 'Linus Mofo',
       user: 'African Climate Policy Centre',
       link: '#0',
-      content: 'Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.',
+      content: '',
     },
     {
       image: TestimonialImg06,
       name: 'Howard W. Buffet',
       user: 'Columbia University',
       link: '#0',
-      content: 'Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.',
+      content: '',
     },
     {
       image: TestimonialImg07,
       name: 'Joel K. Bourne',
       user: 'National Geographic',
       link: '#0',
-      content: 'Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.',
+      content: '',
     },
     {
       image: TestimonialImg08,
       name: 'Rami Zurayk',
       user: 'American University of Beirut',
       link: '#0',
-      content: 'Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.',
+      content: '',
     },
   ]
 
@@ -124,6 +124,13 @@ export default function Testimonials() {
             {/* <div className="flex items-start justify-center md:justify-start [&>div]:mx-3 animate-infinite-scroll group-hover:[animation-play-state:paused]"> */}
             {/* <div className="flex items-start justify-center md:justify-start [&>div]:mx-3 animate-infinite-scroll-inverse group-hover:[animation-play-state:paused] [animation-delay:-7.5s]"> */}
           </div >
+          <div className="relative max-w-3xl mx-auto text-center pt-3 md:pt-6">
+            <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <div>
+                <a className="btn text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/request-demo">Meet the team</a>
+              </div>
+            </div>
+          </div>
         </div >
       </div >
     </section >

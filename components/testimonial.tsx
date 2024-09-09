@@ -23,7 +23,7 @@ export default function Testimonial({ testimonial, children }: TestimonialProps)
           </div>
         </div>
       </div>
-      <div className="text-zinc-500 before:content-['\0022'] after:content-['\0022']">
+      <div className="text-zinc-500">
         {children}
       </div>
     </div>

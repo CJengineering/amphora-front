@@ -20,13 +20,13 @@ export default function Features02() {
               <div>
                 <a className="btn text-zinc-100 bg-zinc-900 hover:bg-zinc-800 w-full shadow" href="/request-demo">Learn more</a>
               </div>
-              <div>
+              {/* <div>
                 <a className="btn text-zinc-600 bg-white hover:text-zinc-900 w-full shadow" href="#0">Get in touch</a>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* Clients */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <ul className="inline-flex flex-wrap items-center justify-center -m-2 [mask-image:linear-gradient(to_right,transparent_8px,_theme(colors.white/70)_64px,_theme(colors.white)_50%,_theme(colors.white/70)_calc(100%-64px),_transparent_calc(100%-8px))]">
               <li className="m-2 p-4 relative rounded-lg border border-transparent [background:linear-gradient(theme(colors.zinc.50),theme(colors.zinc.50))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box]">
                 <svg className="fill-zinc-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" aria-label="Adobe">
@@ -59,7 +59,7 @@ export default function Features02() {
                 </svg>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

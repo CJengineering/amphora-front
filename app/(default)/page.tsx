@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Home - Creative',
-  description: 'Page description',
+  title: 'Jameel Index for Food and Trade Vulnerability',
+  description: 'The Jameel Index measures global food security vulnerability, dependence on global trade, and regional threats impacting trade of food goods.',
 }
 
 import Hero from '@/components/hero'

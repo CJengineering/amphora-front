@@ -20,7 +20,7 @@ export default function Footer() {
             </div>
             <div className="grow text-sm text-zinc-500">&copy; jameelindex.org. All rights reserved.</div>
             {/* Social links */}
-            <ul className="flex space-x-4 mt-4 mb-1">
+            {/* <ul className="flex space-x-4 mt-4 mb-1">
               <li>
                 <a className="flex justify-center items-center text-zinc-700 hover:text-zinc-900 transition" href="#0" aria-label="Twitter">
                   <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
@@ -42,12 +42,12 @@ export default function Footer() {
                   </svg>
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
 
 
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-sm text-zinc-800 font-medium mb-2">Company</h6>
+            {/* <h6 className="text-sm text-zinc-800 font-medium mb-2">Company</h6>
             <ul className="text-sm space-y-2">
               <li>
                 <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">About us</a>
@@ -64,12 +64,12 @@ export default function Footer() {
               <li>
                 <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Financial statements</a>
               </li>
-            </ul>
+            </ul> */}
           </div>
 
 
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-sm text-zinc-800 font-medium mb-2">Resources</h6>
+            {/* <h6 className="text-sm text-zinc-800 font-medium mb-2">Resources</h6>
             <ul className="text-sm space-y-2">
               <li>
                 <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Community</a>
@@ -80,25 +80,25 @@ export default function Footer() {
               <li>
                 <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Collaboration features</a>
               </li>
-            </ul>
+            </ul> */}
           </div>
 
 
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-sm text-zinc-800 font-medium mb-2">Legals</h6>
+            {/* <h6 className="text-sm text-zinc-800 font-medium mb-2">Legals</h6> */}
             <ul className="text-sm space-y-2">
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Refund policy</a>
+                <a className="text-zinc-500 hover:text-zinc-900 transition" href="/score-chart">Score Chart</a>
               </li>
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Terms & Conditions</a>
+                <a className="text-zinc-500 hover:text-zinc-900 transition" href="/team">Team</a>
               </li>
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Privacy policy</a>
+                <a className="text-zinc-500 hover:text-zinc-900 transition" href="/contact">Contact</a>
               </li>
-              <li>
+              {/* <li>
                 <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Brand Kit</a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

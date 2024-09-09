@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Request Demo - Creative',
-  description: 'Page description',
+  title: 'Contact | Jameel Index for Food and Trade Vulnerability',
+  description: 'Get in touch with the Jameel Index team to learn more about our data, methodology, and how to use our data for your research.',
 }
 
 import Blocks from './blocks'
@@ -15,9 +15,10 @@ export default function Home() {
           <div className="px-4 sm:px-6">
 
             {/* Page header */}
-            <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-              <h1 className="font-inter-tight text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-zinc-500 via-zinc-900 to-zinc-900 pb-4">Get started with Gray</h1>
-              <p className="text-lg text-zinc-500">Talk to an expert about your requirements, needs, and timeline. Complete the form and we'll make sure to reach out.</p>
+            <div className="max-w-xl mx-auto text-center pb-12 md:pb-16">
+            <h1 className="font-mono text-4xl md:text-5xl font-bold text-black pb-4">Get in touch</h1>
+              <p className="text-lg text-zinc-500">Do you want to partner with the Jameel Index?
+                <br></br>Reach out to us for more information how you can help build the world's leading index on food and trade vulnerability.</p>
             </div>
 
             {/* Form */}
@@ -27,33 +28,33 @@ export default function Home() {
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm text-zinc-800 font-medium mb-2" htmlFor="name">Full Name</label>
-                    <input id="name" className="form-input text-sm w-full" type="text" placeholder="Patrick Rossi" required />
+                    <input id="name" className="form-input text-sm w-full" type="text" placeholder="Full name" required />
                   </div>
                   <div>
                     <label className="block text-sm text-zinc-800 font-medium mb-2" htmlFor="email">Work Email</label>
-                    <input id="email" className="form-input text-sm w-full" type="email" placeholder="mark@acmecorp.com" required />
+                    <input id="email" className="form-input text-sm w-full" type="email" placeholder="your@email.com" required />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2" htmlFor="channel">How did you hear about us?</label>
                     <select id="channel" className="form-select w-full" required>
-                      <option>Twitter</option>
-                      <option>Medium</option>
-                      <option>Telegram</option>
+                      <option>Social media</option>
+                      <option>Online search</option>
+                      <option>In-person</option>
                     </select>
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2" htmlFor="message">Project Details</label>
-                    <textarea id="message" className="form-textarea text-sm w-full" rows={4} placeholder="Share your requirements" required></textarea>
+                    <textarea id="message" className="form-textarea text-sm w-full" rows={4} placeholder="Let us know..." required></textarea>
                   </div>
                 </div>
                 <div className="mt-5">
-                  <button className="btn text-zinc-100 bg-zinc-900 hover:bg-zinc-800 w-full shadow">Request Demo</button>
+                  <button className="btn text-zinc-100 bg-zinc-900 hover:bg-zinc-800 w-full shadow">Get in touch</button>
                 </div>
               </form>
 
               <div className="text-center mt-6">
                 <div className="text-xs text-zinc-500">
-                  By submitting you agree with our <a className="underline hover:no-underline" href="#0">Terms</a>
+                  By submitting you agree we can contact you.
                 </div>
               </div>
 
@@ -63,8 +64,8 @@ export default function Home() {
         </div>
       </section>
 
-      <Blocks />
-      <Community />      
+      {/* <Blocks /> */}
+      {/* <Community />       */}
     </>
   )
 }
