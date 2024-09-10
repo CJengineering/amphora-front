@@ -13,7 +13,7 @@ export default function Features02() {
                 <Image src={Logo} width={60} height={60} alt="Logo" />
               </Link>
             </div>
-            <h2 className="font-inter-tight text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Join the Jameel Index</h2>
+            <h2 className="font-mono text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Join the Jameel Index</h2>
             <p className="text-lg text-zinc-500 mb-8">The Jameel Index is building a unique platform for modelling global food and trade vulnerability and is actively looking to collaborate with academics institutions and international organisations.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <div>

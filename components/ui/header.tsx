@@ -12,7 +12,7 @@ export default function Header() {
             {/* Site branding */}
             <div className="shrink-0 mr-4">
               {/* Logo */}
-              <Link className="flex items-center justify-center bg-white w-8 h-8 rounded shadow-sm shadow-zinc-950/20" href="/">
+              <Link className="flex items-center justify-center" href="/">
                 <Image src={Logo} width={24} height={24} alt="Logo" />
               </Link>
             </div>

@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-6 max-sm:order-1 flex flex-col">
             <div className="mb-4">
               {/* Logo */}
-              <Link className="flex items-center justify-center bg-white w-8 h-8 rounded shadow-sm shadow-zinc-950/20" href="/">
+              <Link className="flex items-center justify-centerw-8 h-8" href="/">
                 <Image src={Logo} width={24} height={24} alt="Logo" />
               </Link>
             </div>
