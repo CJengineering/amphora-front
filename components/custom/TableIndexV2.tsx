@@ -48,10 +48,25 @@ const getBgColorString = (value: string) => {
   return "bg-very-low"; // dark orange for 5
 };
 const createPercent = (value: number) => {
-    const percent = Math.round(value * 100 * 100) / 100;
+  const percent = Math.round(value * 100 * 100) / 100;
   return `${percent}%`;
 };
-
+function getRiskLevel(number: number) {
+  switch (number) {
+    case 1:
+      return "Very Low";
+    case 2:
+      return "Low";
+    case 3:
+      return "Medium";
+    case 4:
+      return "High";
+    case 5:
+      return "Extreme";
+    default:
+      return "Invalid input";
+  }
+}
 const checkColumnName = (name: string) => {
   if (
     name === "overallScore" ||
@@ -72,21 +87,11 @@ const columns = [
     header: () => <div className="mr-2 uppercase font-mono">Country</div>,
     cell: (info) => info.getValue(),
   }),
-  columnHelper.accessor("overallScore", {
-    header: () => (
-      <div className="font-mono uppercase hidden md:block ">OVERALL</div>
-    ),
-    cell: (info) => (
-      <div className={`${getBgColorPercentage(info.getValue())} p-4 `}>
-        {createPercent(info.getValue())}
-      </div>
-    ),
-  }),
+
   columnHelper.accessor("jameelIndex", {
     header: () => (
-        <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group">
-       
-        <span>JIS</span>
+      <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group w-32">
+        <span>Jameel Index</span>
         <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Jameel Index</p>
           <p className="text-xs normal-case">
@@ -104,9 +109,9 @@ const columns = [
   }),
   columnHelper.accessor("foodIm", {
     header: () => (
-      <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group">
+      <div className="relative font-mono text-xs uppercase items-center space-x-2 hidden md:flex group w-32">
         <GlobeAltIcon className="h-4" />
-        <span>FID</span>
+        <span>Food Import Dependency</span>
         <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Food Import Dependency</p>
           <p className="text-xs normal-case">
@@ -118,15 +123,15 @@ const columns = [
     ),
     cell: (info) => (
       <div className={`${getBgColor(info.getValue())} p-4`}>
-        {info.getValue()}
+        {getRiskLevel(info.getValue())}
       </div>
     ),
   }),
   columnHelper.accessor("feedIm", {
     header: () => (
-      <div className="relative hidden md:flex uppercase font-mono items-center space-x-2 group">
+      <div className="relative hidden md:flex text-xs uppercase font-mono items-center space-x-2 group w-32">
         <CircleStackIcon className="h-4" />
-        <span>AID</span>
+        <span>Animal Feed Import Dependency</span>
         <div className="absolute z-20 hidden group-hover:block top-[-70px] left-0 w-[300px]  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Animal Feed Import Dependency</p>
           <p className="text-xs normal-case">
@@ -137,15 +142,15 @@ const columns = [
     ),
     cell: (info) => (
       <div className={`${getBgColor(info.getValue())} p-4`}>
-        {info.getValue()}
+        {getRiskLevel(info.getValue())}
       </div>
     ),
   }),
   columnHelper.accessor("forExch", {
     header: () => (
-      <div className="relative hidden md:flex items-center space-x-2 group">
+      <div className="relative uppercase hidden md:flex text-xs items-center space-x-2 group w-32">
         <ChartBarIcon className="h-4" />
-        <span>FER</span>
+        <span>Food Import to Export Ratio</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Food Import to Export Ratio</p>
           <p className="text-xs normal-case">
@@ -157,15 +162,15 @@ const columns = [
     ),
     cell: (info) => (
       <div className={`${getBgColor(info.getValue())} p-4`}>
-        {info.getValue()}
+        {getRiskLevel(info.getValue())}
       </div>
     ),
   }),
   columnHelper.accessor("supplyReliab", {
     header: () => (
-      <div className="relative hidden md:flex items-center space-x-2 group">
+      <div className="relative hidden uppercase text-xs md:flex items-center space-x-2 group w-32">
         <UsersIcon className="h-4" />
-        <span>KFTP</span>
+        <span>Key Food Trade Partners</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className="normal-case">Key Food Trade Partners</p>
 
@@ -177,15 +182,16 @@ const columns = [
     ),
     cell: (info) => (
       <div className={`${getBgColor(info.getValue())} p-4`}>
-        {info.getValue()}
+        {getRiskLevel(info.getValue())}
       </div>
     ),
   }),
+
   columnHelper.accessor("supplyRoboost", {
     header: () => (
-      <div className="relative hidden md:flex uppercase font-mono items-center space-x-2 group">
+      <div className="relative hidden md:flex text-xs uppercase font-mono items-center space-x-2 group w-32">
         <ArrowTrendingUpIcon className="h-4" />
-        <span>CYV</span>
+        <span>Annual Crop Yield Variability</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className="font-bold normal-case">Annual Crop Yield Variability</p>
           <p className="text-xs normal-case">
@@ -196,15 +202,15 @@ const columns = [
     ),
     cell: (info) => (
       <div className={`${getBgColor(info.getValue())} p-4`}>
-        {info.getValue()}
+        {getRiskLevel(info.getValue())}
       </div>
     ),
   }),
   columnHelper.accessor("climatePolicy", {
     header: () => (
-      <div className="relative flex items-center uppercase font-mono space-x-2 group">
+      <div className="relative flex items-center text-xs  uppercase font-mono space-x-2 group w-32">
         <CloudIcon className="h-4" />
-        <span>FTI</span>
+        <span> Food Shipment Emission Tax Impact</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className="font-bold normal-case">
             Food Shipment Emission Tax Impact
@@ -218,7 +224,7 @@ const columns = [
     ),
     cell: (info) => (
       <div className={`${getBgColor(info.getValue())} p-4`}>
-        {info.getValue()}
+        {getRiskLevel(info.getValue())}
       </div>
     ),
   }),
@@ -412,7 +418,7 @@ export default function TableIndexV2() {
 
           {unpinnedRowsData.map((row) => (
             <React.Fragment key={row.id}>
-              <tr className="hover:bg-gray-10 h-10">
+              <tr className="hover:bg-gray-10 h-12">
                 {row.getVisibleCells().map((cell) => (
                   <td
                     key={cell.id}
@@ -426,7 +432,7 @@ export default function TableIndexV2() {
                     }`}
                   >
                     {cell.column.id === "nation" ? (
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between ">
                         <div className="flex items-center">
                           <input
                             type="checkbox"
@@ -441,7 +447,7 @@ export default function TableIndexV2() {
                           )}
                         </div>
                         <button
-                          className="md:hidden"
+                          className="md:hidden mr-2"
                           onClick={() => toggleRowExpansion(row.id)}
                         >
                           {expandedRows[row.id] ? "▲" : "▼"}
@@ -461,48 +467,48 @@ export default function TableIndexV2() {
 
               {/* Expanded view in mobile for hidden columns */}
               {expandedRows[row.id] && (
-                <tr className="md:hidden">
-                  <td colSpan={2} className="">
+                <tr className="md:hidden ">
+                  <td colSpan={4} className="h-12">
                     <div className="">
                       {/* Iterate over the remaining columns */}
                       {[
                         {
                           header: "Food Import Dependency",
-                          value: row.original.foodIm,
+                          value:  getRiskLevel(row.original.foodIm),
                           bgColor: getBgColor(row.original.foodIm),
                         },
                         {
                           header: "Animal Feed Import Dependency",
-                          value: row.original.feedIm,
+                          value: getRiskLevel(row.original.feedIm) ,
                           bgColor: getBgColor(row.original.feedIm),
                         },
                         {
                           header: "Food Import to Export Ratio",
-                          value: row.original.forExch,
+                          value: getRiskLevel(row.original.forExch),
                           bgColor: getBgColor(row.original.forExch),
                         },
                         {
                           header: "Key Food Trade Partners",
-                          value: row.original.supplyReliab,
+                          value: getRiskLevel(row.original.supplyReliab),
                           bgColor: getBgColor(row.original.supplyReliab),
                         },
                         {
                           header: "Annual Crop Yield Variability",
-                          value: row.original.supplyRoboost,
+                          value: getRiskLevel(row.original.supplyRoboost),
                           bgColor: getBgColor(row.original.supplyRoboost),
                         },
                         {
                           header: "Food Shipment Emission Tax Impact",
-                          value: row.original.climatePolicy,
+                          value: getRiskLevel(row.original.climatePolicy),
                           bgColor: getBgColor(row.original.climatePolicy),
                         },
                       ].map((item, index) => (
                         <div className="flex" key={index}>
-                          <div className="flex items-center  pl-4   h-8 w-[100%] border  ">
+                          <div className="flex items-center  pl-4   h-12 w-[100%] border  ">
                             {item.header}
                           </div>
                           <div
-                            className={`flex h-8 items-center justify-center ${item.bgColor} w-[30%] `}
+                            className={`flex h-12 items-center justify-center ${item.bgColor} w-[33%] `}
                           >
                             {item.value}
                           </div>

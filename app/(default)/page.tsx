@@ -10,12 +10,13 @@ import Features03 from '@/components/features-03'
 import PricingTabs from '@/components/pricing-tabs'
 import Testimonials from '@/components/testimonials'
 import Cta from '@/components/cta'
+import Accordion from '@/components/accordion'
 
 export default function Home() {
   return (
     <>
       <Hero />
-      
+   
       <Features01 />
       <Features02 />
       {/* <Features03 /> */}
