@@ -20,6 +20,7 @@ import MarkImage from '@/public/images/experts/Mark-Rosegrant.jpg'
 import TehminaImage from '@/public/images/experts/Tehmina-Kahn.jpg'
 import WillImage from '@/public/images/experts/Will-Masters.jpg'
 import ChrisImage from '@/public/images/research-team/chris-maynard.jpg'
+import ShigieSyang from '@/public/images/experts/Shigie_Syang.jpg'
 
 export const metadata = {
     title: 'Team | Jameel Index for Food and Trade Vulnerability',
@@ -229,7 +230,7 @@ export const metadata = {
 
             <div>
             <div className="w-28 h-28 inline-flex items-center justify-center mb-3">
-              {/* <Image className="rounded-full" src={GregImage} alt="Greg Sixt headshot" priority /> */}
+               <Image className="rounded-full" src={ShigieSyang} alt="Shigie Syang headshot" priority /> 
               </div>
               <h3 className="font-inter-tight font-semibold text-zinc-800 mb-1">Shigie Yang</h3>
               <p className="text-sm text-zinc-500">Economist, World Bank</p>

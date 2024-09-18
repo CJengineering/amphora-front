@@ -90,9 +90,9 @@ const columns = [
 
   columnHelper.accessor("jameelIndex", {
     header: () => (
-      <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group w-32">
-        <span>Jameel Index</span>
-        <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+      <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group w-32 whitespace-nowrap">
+        <span>JIS</span>
+        <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Jameel Index</p>
           <p className="text-xs normal-case">
             Measures the percentage of a country's food demand met through
@@ -102,16 +102,16 @@ const columns = [
       </div>
     ),
     cell: (info) => (
-      <div className={`${getBgColorString(info.getValue())} p-4 `}>
+      <div className={`${getBgColorString(info.getValue())} whitespace-nowrap  p-4 `}>
         {info.getValue()}
       </div>
     ),
   }),
   columnHelper.accessor("foodIm", {
     header: () => (
-      <div className="relative font-mono text-xs uppercase items-center space-x-2 hidden md:flex group w-32">
+      <div className="relative font-mono  uppercase items-center space-x-2 hidden md:flex group w-32">
         <GlobeAltIcon className="h-4" />
-        <span>Food Import Dependency</span>
+        <span>FID</span>
         <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Food Import Dependency</p>
           <p className="text-xs normal-case">
@@ -131,7 +131,7 @@ const columns = [
     header: () => (
       <div className="relative hidden md:flex text-xs uppercase font-mono items-center space-x-2 group w-32">
         <CircleStackIcon className="h-4" />
-        <span>Animal Feed Import Dependency</span>
+        <span>AID</span>
         <div className="absolute z-20 hidden group-hover:block top-[-70px] left-0 w-[300px]  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Animal Feed Import Dependency</p>
           <p className="text-xs normal-case">
@@ -150,7 +150,7 @@ const columns = [
     header: () => (
       <div className="relative uppercase hidden md:flex text-xs items-center space-x-2 group w-32">
         <ChartBarIcon className="h-4" />
-        <span>Food Import to Export Ratio</span>
+        <span>FER</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Food Import to Export Ratio</p>
           <p className="text-xs normal-case">
@@ -170,7 +170,7 @@ const columns = [
     header: () => (
       <div className="relative hidden uppercase text-xs md:flex items-center space-x-2 group w-32">
         <UsersIcon className="h-4" />
-        <span>Key Food Trade Partners</span>
+        <span>kftp</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className="normal-case">Key Food Trade Partners</p>
 
@@ -191,7 +191,7 @@ const columns = [
     header: () => (
       <div className="relative hidden md:flex text-xs uppercase font-mono items-center space-x-2 group w-32">
         <ArrowTrendingUpIcon className="h-4" />
-        <span>Annual Crop Yield Variability</span>
+        <span>CYV</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className="font-bold normal-case">Annual Crop Yield Variability</p>
           <p className="text-xs normal-case">
@@ -210,7 +210,7 @@ const columns = [
     header: () => (
       <div className="relative flex items-center text-xs  uppercase font-mono space-x-2 group w-32">
         <CloudIcon className="h-4" />
-        <span> Food Shipment Emission Tax Impact</span>
+        <span> FTI</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className="font-bold normal-case">
             Food Shipment Emission Tax Impact
@@ -319,7 +319,7 @@ export default function TableIndexV2() {
                 {row.getVisibleCells().map((cell) => (
                   <td
                     key={cell.id}
-                    className={`border ${
+                    className={`border  ${
                       cell.column.getIsSorted() ? "sorted-cell" : ""
                     } ${
                       cell.column.id === "nation" ||
@@ -329,7 +329,7 @@ export default function TableIndexV2() {
                     }`}
                   >
                     {cell.column.id === "nation" ? (
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between ">
                         <div className="flex items-center space-x-1">
                           <input
                             type="checkbox"
@@ -433,7 +433,7 @@ export default function TableIndexV2() {
                   >
                     {cell.column.id === "nation" ? (
                       <div className="flex items-center justify-between ">
-                        <div className="flex items-center">
+                        <div className="flex items-center " onClick={() => toggleRowExpansion(row.id)}>
                           <input
                             type="checkbox"
                             className="mx-2 hidden md:block"
@@ -448,7 +448,7 @@ export default function TableIndexV2() {
                         </div>
                         <button
                           className="md:hidden mr-2"
-                          onClick={() => toggleRowExpansion(row.id)}
+                         
                         >
                           {expandedRows[row.id] ? "▲" : "▼"}
                         </button>
@@ -469,7 +469,7 @@ export default function TableIndexV2() {
               {expandedRows[row.id] && (
                 <tr className="md:hidden ">
                   <td colSpan={4} className="h-12">
-                    <div className="">
+                    <div className=" ">
                       {/* Iterate over the remaining columns */}
                       {[
                         {
@@ -503,12 +503,12 @@ export default function TableIndexV2() {
                           bgColor: getBgColor(row.original.climatePolicy),
                         },
                       ].map((item, index) => (
-                        <div className="flex" key={index}>
-                          <div className="flex items-center  pl-4   h-12 w-[100%] border  ">
+                        <div className="flex  border w-[380px]" key={index}>
+                          <div className="flex items-center w-full pl-4   h-12   ">
                             {item.header}
                           </div>
                           <div
-                            className={`flex h-12 items-center justify-center ${item.bgColor} w-[33%] `}
+                            className={`flex h-12 items-center w-[120px]  px-4 ${item.bgColor}  `}
                           >
                             {item.value}
                           </div>

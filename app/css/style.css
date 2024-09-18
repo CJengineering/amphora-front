@@ -12,6 +12,9 @@ table {
     padding: 0; /* Removes any padding inside the table */
     width: 100%; /* Optional: make table span full width */
   }
+  html{
+    overflow-y: scroll ;
+  }
   
   table td, table th {
     line-height: 1;
@@ -36,11 +39,12 @@ table {
   
   /* Apply the shine effect to headers and cells when sorted */
 
-  .sorted-cell {
-    border-left: 2px solid rgba(92, 92, 82, 0.5);
-    border-right: 2px solid rgba(92, 92, 82, 0.5);
-
-    animation: shine 1s infinite alternate; /* Shining animation for left and right borders */
+  @media (min-width: 768px) {
+    .sorted-cell {
+      border-left: 2px solid rgba(92, 92, 82, 0.5);
+      border-right: 2px solid rgba(92, 92, 82, 0.5);
+      animation: shine 1s infinite alternate; /* Shining animation for left and right borders */
+    }
   }
   .bg-very-low {
     background-color: #96D64E;
