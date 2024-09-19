@@ -34,14 +34,14 @@ const getBgColor = (value: number) => {
   return "bg-extreme"; // dark orange for 5
 };
 const getStringFromNumber = (value: number) => {
-  if (value < 0.2) return "Very Low";
+  if (value <= 0.2) return "Very Low";
   if (value < 0.4) return "Low";
   if (value < 0.6) return "Medium";
   if (value < 0.8) return "High";
   return "Extreme";
 }
 const getBgColorPercentage = (value: number): string => {
-  if (value < 0.2) return "bg-very-low"; // light blue for values under 0.2 (Very Low)
+  if (value <= 0.2) return "bg-very-low"; // light blue for values under 0.2 (Very Low)
   if (value < 0.4) return "bg-low"; // light green for values between 0.2 and 0.39 (Low)
   if (value < 0.6) return "bg-medium"; // light yellow for values between 0.4 and 0.59 (Medium)
   if (value < 0.8) return "bg-high"; // light orange for values between 0.6 and 0.79 (High)

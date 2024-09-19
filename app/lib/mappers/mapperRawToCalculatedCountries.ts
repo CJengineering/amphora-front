@@ -8,13 +8,14 @@ export const mapperRawToCalculatedCountries = (
   return rawCountries.map((country) => {
     // Convert each value to a Decimal type for accurate calculations
     let foodIm = new Decimal(country.foodIm);
+    let supplyReliability = new Decimal(country.supplyReliab);
     let feedIm = new Decimal(country.feedIm);
     let forExch = new Decimal(country.forExch);
     let supplyRoboost = new Decimal(country.supplyRoboost);
     let climatePolicy = new Decimal(country.climatePolicy);
 
     // Calculate total sum using Decimal.js for precision
-    let totalSum = foodIm.plus(feedIm).plus(forExch).plus(supplyRoboost).plus(climatePolicy);
+    let totalSum = foodIm.plus(feedIm).plus(forExch).plus(supplyRoboost).plus(climatePolicy).plus(supplyReliability);
 
     // Check if the total sum equals 21 and modify it if necessary
     if (totalSum.equals(21)) {
@@ -29,6 +30,7 @@ export const mapperRawToCalculatedCountries = (
 
     // Convert the rounded score to a number for further processing or display
     let finalScore = roundedOverallScore.toNumber();
+     ;
 
     // Convert overallScore to jisKpi using your existing function
     const jisKpi = numbersToWordKpi(finalScore);
