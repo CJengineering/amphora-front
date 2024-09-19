@@ -19,7 +19,7 @@ export default function Footer() {
               </Link>
             </div>
             <div className="grow text-sm text-zinc-500">&copy; jameelindex.mit.edu |All rights reserved.</div>
-            <div className="grow text-sm text-zinc-500"><Link href={'https://accessibility.mit.edu'}>Accessibility</Link></div>
+            <div className="grow text-sm text-zinc-500"><Link href={'https://accessibility.mit.edu'} className='hover:cursor-pointer hover:underline'>Accessibility</Link></div>
 
             {/* Social links */}
             {/* <ul className="flex space-x-4 mt-4 mb-1">
