@@ -19,7 +19,6 @@ export default function Footer() {
               </Link>
             </div>
             <div className="grow text-sm text-zinc-500">&copy; jameelindex.mit.edu |All rights reserved.</div>
-            <div className="grow text-sm text-zinc-500"><Link href={'https://accessibility.mit.edu'} className='hover:cursor-pointer hover:underline'>Accessibility</Link></div>
 
             {/* Social links */}
             {/* <ul className="flex space-x-4 mt-4 mb-1">
@@ -98,6 +97,8 @@ export default function Footer() {
               <li>
                 <a className="text-zinc-500 hover:text-zinc-900 transition" href="/contact">Contact</a>
               </li>
+              <div className="grow text-sm text-zinc-500"><Link href={'https://accessibility.mit.edu'} className='text-zinc-500 hover:text-zinc-900 transition'>Accessibility</Link></div>
+
               {/* <li>
                 <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Brand Kit</a>
               </li> */}
