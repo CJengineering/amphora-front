@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '@/public/images/logo-02.png'
+import Logo from '@/public/images/logo.png'
 
 export default function Features02() {
   return (

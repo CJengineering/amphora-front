@@ -33,6 +33,13 @@ const getBgColor = (value: number) => {
   if (value <= 4) return "bg-high"; // darker orange for 4
   return "bg-extreme"; // dark orange for 5
 };
+const getStringFromNumber = (value: number) => {
+  if (value < 0.2) return "Very Low";
+  if (value < 0.4) return "Low";
+  if (value < 0.6) return "Medium";
+  if (value < 0.8) return "High";
+  return "Extreme";
+}
 const getBgColorPercentage = (value: number): string => {
   if (value < 0.2) return "bg-very-low"; // light blue for values under 0.2 (Very Low)
   if (value < 0.4) return "bg-low"; // light green for values between 0.2 and 0.39 (Low)
@@ -84,13 +91,13 @@ const checkColumnName = (name: string) => {
 const columnHelper = createColumnHelper<CountryData>();
 const columns = [
   columnHelper.accessor("nation", {
-    header: () => <div className="mr-2 uppercase font-mono">Country</div>,
+    header: () => <div className="mr-2 uppercase font-mono  ">Country</div>,
     cell: (info) => info.getValue(),
   }),
 
-  columnHelper.accessor("jameelIndex", {
+  columnHelper.accessor("overallScore", {
     header: () => (
-      <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group w-32 whitespace-nowrap">
+      <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group w-24  whitespace-nowrap">
         <span>JIS</span>
         <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Jameel Index</p>
@@ -103,17 +110,17 @@ const columns = [
     ),
     cell: (info) => (
       <div
-        className={`${getBgColorString(
+        className={`${getBgColorPercentage(
           info.getValue()
         )} whitespace-nowrap  p-4 `}
       >
-        {info.getValue()}
+        {getStringFromNumber(info.getValue())}
       </div>
     ),
   }),
   columnHelper.accessor("foodIm", {
     header: () => (
-      <div className="relative font-mono  uppercase items-center space-x-2 hidden md:flex group w-32">
+      <div className="relative font-mono  uppercase items-center space-x-2 hidden md:flex group  w-24">
         <GlobeAltIcon className="h-4" />
         <span>FID</span>
         <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
@@ -133,7 +140,7 @@ const columns = [
   }),
   columnHelper.accessor("feedIm", {
     header: () => (
-      <div className="relative hidden md:flex text-xs uppercase font-mono items-center space-x-2 group w-32">
+      <div className="relative hidden md:flex  uppercase font-mono items-center space-x-2 group w-24">
         <CircleStackIcon className="h-4" />
         <span>AID</span>
         <div className="absolute z-20 hidden group-hover:block top-[-70px] left-0 w-[300px]  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
@@ -152,7 +159,7 @@ const columns = [
   }),
   columnHelper.accessor("forExch", {
     header: () => (
-      <div className="relative uppercase hidden md:flex text-xs items-center space-x-2 group w-32">
+      <div className="relative uppercase hidden md:flex  items-center space-x-2 group w-24 ">
         <ChartBarIcon className="h-4" />
         <span>FER</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
@@ -172,8 +179,9 @@ const columns = [
   }),
   columnHelper.accessor("supplyReliab", {
     header: () => (
-      <div className="relative hidden uppercase text-xs md:flex items-center space-x-2 group w-32">
+      <div className="relative hidden uppercase md:flex items-center space-x-2 group w-24 ">
         <UsersIcon className="h-4" />
+
         <span>kftp</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className="normal-case">Key Food Trade Partners</p>
@@ -193,7 +201,7 @@ const columns = [
 
   columnHelper.accessor("supplyRoboost", {
     header: () => (
-      <div className="relative hidden md:flex text-xs uppercase font-mono items-center space-x-2 group w-32">
+      <div className="relative hidden md:flex  uppercase font-mono items-center space-x-2 group w-24 ">
         <ArrowTrendingUpIcon className="h-4" />
         <span>CYV</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
@@ -212,7 +220,7 @@ const columns = [
   }),
   columnHelper.accessor("climatePolicy", {
     header: () => (
-      <div className="relative flex items-center text-xs  uppercase font-mono space-x-2 group w-32">
+      <div className="relative flex items-center  uppercase font-mono space-x-2 group w-24">
         <CloudIcon className="h-4" />
         <span> FTI</span>
         <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
@@ -319,7 +327,7 @@ export default function TableIndexV2() {
         <tbody>
           {pinnedRowsData.map((row) => (
             <React.Fragment key={row.id}>
-              <tr className="hover:bg-gray-100 ">
+              <tr className="hover:bg-gray-100">
                 {row.getVisibleCells().map((cell) => (
                   <td
                     key={cell.id}
@@ -334,7 +342,7 @@ export default function TableIndexV2() {
                   >
                     {cell.column.id === "nation" ? (
                       <div className="flex items-center justify-between ">
-                        <div className="flex items-center space-x-1">
+                        <div className="flex items-center space-x-1  leading-normal ">
                           <input
                             type="checkbox"
                             checked={!!pinnedRows[row.id]}
@@ -431,7 +439,7 @@ export default function TableIndexV2() {
                     } ${
                       cell.column.id === "nation" ||
                       cell.column.id === "jameelIndex"
-                        ? "w-2/3"
+                        ? "w-2/3  md:w-full"
                         : "hidden md:table-cell"
                     }`}
                   >
@@ -460,7 +468,7 @@ export default function TableIndexV2() {
                         </button>
                       </div>
                     ) : (
-                      <div className="md:block">
+                      <div className="md:block ">
                         {flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext()

@@ -10,6 +10,7 @@ export default function TablePage() {
         <div className="px-4 sm:px-6 max-w-7xl mx-auto">
 
           <TableIndexV2 />
+          <p className="py-8">As of September 2024, the above data is preliminary</p>
 
         </div>
       </div>

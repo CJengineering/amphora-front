@@ -650,7 +650,7 @@ export const  countriesData: CountryData[] =[
       years: []
     },
     {
-      nation: "United Kingdom of Great Britain and Northern Ireland",
+      nation: "United Kingdom ",
       overallScore: 1,
       jameelIndex: "",
       foodIm: 3,
