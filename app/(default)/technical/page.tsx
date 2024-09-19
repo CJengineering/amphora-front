@@ -1,10 +1,12 @@
 import Accordion from "@/components/accordion";
+import MetaIndicatorList from "@/components/test-components/MetaIndicatorList";
 import { Metadata } from "next";
 import React from "react";
 export const metadata: Metadata = {
     title: 'Technical | Jameel Index for Food Trade and Vulnerability',
     description: 'Description of the technical page',
   }
+
 
 export default function page() {
   return (
@@ -22,93 +24,10 @@ export default function page() {
               praesentium reiciendis!
             </p>
           </div>
-
+    
           <div className="space-y-6"> {/* Adding space between Accordions */}
-            <Accordion title="Jameel Index" id="jameel-index">
-              <div slot="title">Jameel Index</div>
-              <div slot="content">
-                <p>
-                  Measures the percentage of a country's food demand met through
-                  imports.
-                </p>
-              </div>
-            </Accordion>
-
-            <Accordion
-              title="Food Import Dependency"
-              id="food-import-dependency"
-            >
-              <div slot="title">Food Import Dependency</div>
-              <div slot="content">
-                <p>
-                  Measures the percentage of a country's food demand met through
-                  imports.
-                </p>
-              </div>
-            </Accordion>
-
-            <Accordion
-              title="Animal Feed Import Dependency"
-              id="animal-feed-import-dependency"
-            >
-              <div slot="title">Animal Feed Import Dependency</div>
-              <div slot="content">
-                <p>
-                  Tracks the percentage of animal feed demand met by imports.
-                </p>
-              </div>
-            </Accordion>
-
-            <Accordion
-              title="Food Import to Export Ratio"
-              id="food-import-export-ratio"
-            >
-              <div slot="title">Food Import to Export Ratio</div>
-              <div slot="content">
-                <p>
-                  Compares the value of food imports to a country's total export
-                  value.
-                </p>
-              </div>
-            </Accordion>
-
-            <Accordion
-              title="Key Food Trade Partners"
-              id="key-food-trade-partners"
-            >
-              <div slot="title">Key Food Trade Partners</div>
-              <div slot="content">
-                <p>
-                  Counts the number of trade partners supplying 80% of food
-                  imports.
-                </p>
-              </div>
-            </Accordion>
-
-            <Accordion
-              title="Annual Crop Yield Variability"
-              id="annual-crop-yield-variability"
-            >
-              <div slot="title">Annual Crop Yield Variability</div>
-              <div slot="content">
-                <p>
-                  Assesses the annual fluctuation in crop yields for a country.
-                </p>
-              </div>
-            </Accordion>
-
-            <Accordion
-              title="Food Shipment Emission Tax Impact"
-              id="food-shipment-emission-tax-impact"
-            >
-              <div slot="title">Food Shipment Emission Tax Impact</div>
-              <div slot="content">
-                <p>
-                  Evaluates the effect of greenhouse gas emission taxes on food
-                  shipment costs.
-                </p>
-              </div>
-            </Accordion>
+          <MetaIndicatorList />
+            
           </div>
         </div>
       </div>
