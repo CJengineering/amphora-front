@@ -1,5 +1,10 @@
 import Accordion from "@/components/accordion";
+import { Metadata } from "next";
 import React from "react";
+export const metadata: Metadata = {
+    title: 'Technical | Jameel Index for Food Trade and Vulnerability',
+    description: 'Description of the technical page',
+  }
 
 export default function page() {
   return (

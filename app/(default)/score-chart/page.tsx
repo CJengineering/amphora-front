@@ -1,7 +1,13 @@
 import TableIndex from "@/components/custom/TableIndex";
 import TableIndexV2 from "@/components/custom/TableIndexV2";
 import TESTTableComponent from "@/components/test-components/TestTableComponent";
+import { Metadata } from "next";
 import React from "react";
+export const metadata: Metadata = {
+  title: 'Score chart | Jameel Index for Food Trade and Vulnerability',
+  description: 'Description of the score chart page',
+}
+
 
 export default function TablePage() {
   return (

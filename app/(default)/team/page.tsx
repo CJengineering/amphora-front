@@ -21,11 +21,14 @@ import TehminaImage from '@/public/images/experts/Tehmina-Kahn.jpg'
 import WillImage from '@/public/images/experts/Will-Masters.jpg'
 import ChrisImage from '@/public/images/research-team/chris-maynard.jpg'
 import ShigieSyang from '@/public/images/experts/Shigie_Syang.jpg'
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'Team | Jameel Index for Food Trade and Vulnerability',
+  description: 'Description of the team page',
+}
 
-export const metadata = {
-    title: 'Team | Jameel Index for Food and Trade Vulnerability',
-    description: 'The Jameel Index is composed of a team of experts in food security, trade, and vulnerability from world-renowned institutions.',
-  }
+
+
 
   export default function Hero() {
     return (
