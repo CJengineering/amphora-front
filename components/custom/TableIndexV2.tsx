@@ -102,7 +102,11 @@ const columns = [
       </div>
     ),
     cell: (info) => (
-      <div className={`${getBgColorString(info.getValue())} whitespace-nowrap  p-4 `}>
+      <div
+        className={`${getBgColorString(
+          info.getValue()
+        )} whitespace-nowrap  p-4 `}
+      >
         {info.getValue()}
       </div>
     ),
@@ -427,29 +431,31 @@ export default function TableIndexV2() {
                     } ${
                       cell.column.id === "nation" ||
                       cell.column.id === "jameelIndex"
-                        ? ""
+                        ? "w-2/3"
                         : "hidden md:table-cell"
                     }`}
                   >
                     {cell.column.id === "nation" ? (
-                      <div className="flex items-center justify-between ">
-                        <div className="flex items-center " onClick={() => toggleRowExpansion(row.id)}>
+                      <div
+                        className="flex items-center justify-between "
+                        onClick={() => toggleRowExpansion(row.id)}
+                      >
+                        <div className="flex items-center">
                           <input
                             type="checkbox"
                             className="mx-2 hidden md:block"
                             checked={!!pinnedRows[row.id]}
                             onChange={() => togglePinnedRow(row.id)}
                           />
-                          <div className="mx-2 block md:hidden"></div>
+                          <span className="b ml-2">
+
                           {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()
                           )}
+                          </span>
                         </div>
-                        <button
-                          className="md:hidden mr-2"
-                         
-                        >
+                        <button className="md:hidden mr-2">
                           {expandedRows[row.id] ? "▲" : "▼"}
                         </button>
                       </div>
@@ -467,19 +473,19 @@ export default function TableIndexV2() {
 
               {/* Expanded view in mobile for hidden columns */}
               {expandedRows[row.id] && (
-                <tr className="md:hidden ">
-                  <td colSpan={4} className="h-12">
-                    <div className=" ">
+                <tr className="md:hidden">
+                  <td colSpan={2} className="h-12">
+                    <div>
                       {/* Iterate over the remaining columns */}
                       {[
                         {
                           header: "Food Import Dependency",
-                          value:  getRiskLevel(row.original.foodIm),
+                          value: getRiskLevel(row.original.foodIm),
                           bgColor: getBgColor(row.original.foodIm),
                         },
                         {
                           header: "Animal Feed Import Dependency",
-                          value: getRiskLevel(row.original.feedIm) ,
+                          value: getRiskLevel(row.original.feedIm),
                           bgColor: getBgColor(row.original.feedIm),
                         },
                         {
@@ -503,12 +509,12 @@ export default function TableIndexV2() {
                           bgColor: getBgColor(row.original.climatePolicy),
                         },
                       ].map((item, index) => (
-                        <div className="flex  border w-[380px]" key={index}>
-                          <div className="flex items-center w-full pl-4   h-12   ">
+                        <div className="flex border w-full" key={index}>
+                          <div className="flex items-center w-2/3 pl-2 h-12">
                             {item.header}
                           </div>
                           <div
-                            className={`flex h-12 items-center w-[120px]  px-4 ${item.bgColor}  `}
+                            className={`flex h-12 items-center w-1/3 px-4 ${item.bgColor}`}
                           >
                             {item.value}
                           </div>
