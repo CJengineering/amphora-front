@@ -39,7 +39,7 @@ const getStringFromNumber = (value: number) => {
   if (value < 0.6) return "Medium";
   if (value < 0.8) return "High";
   return "Extreme";
-}
+};
 const getBgColorPercentage = (value: number): string => {
   if (value <= 0.2) return "bg-very-low"; // light blue for values under 0.2 (Very Low)
   if (value < 0.4) return "bg-low"; // light green for values between 0.2 and 0.39 (Low)
@@ -97,9 +97,9 @@ const columns = [
 
   columnHelper.accessor("overallScore", {
     header: () => (
-      <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group w-24  whitespace-nowrap">
+      <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group w-24  ">
         <span>JIS</span>
-        <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+        <div className="absolute font-normal z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Jameel Index</p>
           <p className="text-xs normal-case">
             Measures the percentage of a country's food demand met through
@@ -123,7 +123,7 @@ const columns = [
       <div className="relative font-mono  uppercase items-center space-x-2 hidden md:flex group  w-24">
         <GlobeAltIcon className="h-4" />
         <span>FID</span>
-        <div className="absolute z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+        <div className="absolute z-20 font-normal top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Food Import Dependency</p>
           <p className="text-xs normal-case">
             Measures the percentage of a country's food demand met through
@@ -143,7 +143,7 @@ const columns = [
       <div className="relative hidden md:flex  uppercase font-mono items-center space-x-2 group w-24">
         <CircleStackIcon className="h-4" />
         <span>AID</span>
-        <div className="absolute z-20 hidden group-hover:block top-[-70px] left-0 w-[300px]  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+        <div className="absolute z-20 hidden  font-normal group-hover:block top-[-70px] left-0 w-[300px]  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Animal Feed Import Dependency</p>
           <p className="text-xs normal-case">
             Tracks the percentage of animal feed demand met by imports.
@@ -162,7 +162,7 @@ const columns = [
       <div className="relative uppercase hidden md:flex  items-center space-x-2 group w-24 ">
         <ChartBarIcon className="h-4" />
         <span>FER</span>
-        <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+        <div className="absolute z-20 top-[-70px] font-normal left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className=" normal-case">Food Import to Export Ratio</p>
           <p className="text-xs normal-case">
             Compares the value of food imports to a country's total export
@@ -183,7 +183,7 @@ const columns = [
         <UsersIcon className="h-4" />
 
         <span>kftp</span>
-        <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+        <div className="absolute font-normal z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className="normal-case">Key Food Trade Partners</p>
 
           <p className="text-xs normal-case">
@@ -204,8 +204,8 @@ const columns = [
       <div className="relative hidden md:flex  uppercase font-mono items-center space-x-2 group w-24 ">
         <ArrowTrendingUpIcon className="h-4" />
         <span>CYV</span>
-        <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-          <p className="font-bold normal-case">Annual Crop Yield Variability</p>
+        <div className="absolute z-20 font-normal top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+          <p className=" normal-case">Annual Crop Yield Variability</p>
           <p className="text-xs normal-case">
             Assesses the annual fluctuation in crop yields for a country.
           </p>
@@ -223,8 +223,8 @@ const columns = [
       <div className="relative flex items-center  uppercase font-mono space-x-2 group w-24">
         <CloudIcon className="h-4" />
         <span> FTI</span>
-        <div className="absolute z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-          <p className="font-bold normal-case">
+        <div className="absolute z-20 top-[-70px] font-normal left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+          <p className=" normal-case">
             Food Shipment Emission Tax Impact
           </p>
           <p className="text-xs normal-case">
@@ -245,10 +245,12 @@ const columns = [
 export default function TableIndexV2() {
   const [countries, setCountries] = useState<CountryData[]>([]);
   const [expandedRows, setExpandedRows] = useState<Record<string, boolean>>({});
-  const [sorting, setSorting] = useState<SortingState>([ {
-    id: 'nation',  // Specify the column by id (key)
-    desc: false,   // Set to `false` for ascending alphabetical sorting
-  },]);
+  const [sorting, setSorting] = useState<SortingState>([
+    {
+      id: "nation", // Specify the column by id (key)
+      desc: false, // Set to `false` for ascending alphabetical sorting
+    },
+  ]);
   const [pinnedRows, setPinnedRows] = useState<Record<string, boolean>>({});
 
   const togglePinnedRow = (rowId: string) => {
@@ -459,11 +461,10 @@ export default function TableIndexV2() {
                             onChange={() => togglePinnedRow(row.id)}
                           />
                           <span className="b ml-2">
-
-                          {flexRender(
-                            cell.column.columnDef.cell,
-                            cell.getContext()
-                          )}
+                            {flexRender(
+                              cell.column.columnDef.cell,
+                              cell.getContext()
+                            )}
                           </span>
                         </div>
                         <button className="md:hidden mr-2">

@@ -24,7 +24,9 @@ export default function Hero() {
           
           </div>
           <div className="max-w-6xl mx-auto sm:px-0 flex justify-center pb-12 md:pb-9 relative before:absolute before:-top-12 before:w-96 before:h-96 before:bg-zinc-900 before:opacity-[.15] before:rounded-full before:blur-3xl before:-z-10">
+            <Link href="/score-chart" className='hover:cursor-pointer'>
             <Image className="" src={HeroImage} alt="Hero" priority />
+            </Link>
           </div>
 
           <div className="relative max-w-3xl mx-auto text-center pt-3 md:pt-6">
