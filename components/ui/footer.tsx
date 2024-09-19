@@ -18,7 +18,9 @@ export default function Footer() {
                 <Image src={Logo} width={24} height={24} alt="Logo" />
               </Link>
             </div>
-            <div className="grow text-sm text-zinc-500">&copy; jameelindex.mit.edu All rights reserved.</div>
+            <div className="grow text-sm text-zinc-500">&copy; jameelindex.mit.edu |All rights reserved.</div>
+            <div className="grow text-sm text-zinc-500"><Link href={'https://accessibility.mit.edu'}>Accessibility</Link>></div>
+
             {/* Social links */}
             {/* <ul className="flex space-x-4 mt-4 mb-1">
               <li>
