@@ -245,7 +245,10 @@ const columns = [
 export default function TableIndexV2() {
   const [countries, setCountries] = useState<CountryData[]>([]);
   const [expandedRows, setExpandedRows] = useState<Record<string, boolean>>({});
-  const [sorting, setSorting] = useState<SortingState>([]);
+  const [sorting, setSorting] = useState<SortingState>([ {
+    id: 'nation',  // Specify the column by id (key)
+    desc: false,   // Set to `false` for ascending alphabetical sorting
+  },]);
   const [pinnedRows, setPinnedRows] = useState<Record<string, boolean>>({});
 
   const togglePinnedRow = (rowId: string) => {
@@ -298,7 +301,7 @@ export default function TableIndexV2() {
                   className={`text-left px-2 cursor-pointer ${
                     header.column.getIsSorted() ? "sorted-header" : ""
                   } ${
-                    header.id === "nation" || header.id === "jameelIndex"
+                    header.id === "nation" || header.id === "overallScore"
                       ? ""
                       : "hidden md:table-cell"
                   }`}
@@ -335,7 +338,7 @@ export default function TableIndexV2() {
                       cell.column.getIsSorted() ? "sorted-cell" : ""
                     } ${
                       cell.column.id === "nation" ||
-                      cell.column.id === "jameelIndex"
+                      cell.column.id === "overallScore"
                         ? ""
                         : "hidden md:table-cell"
                     }`}
@@ -438,7 +441,7 @@ export default function TableIndexV2() {
                       cell.column.getIsSorted() ? "sorted-cell" : ""
                     } ${
                       cell.column.id === "nation" ||
-                      cell.column.id === "jameelIndex"
+                      cell.column.id === "overallScore"
                         ? "w-2/3  md:w-full"
                         : "hidden md:table-cell"
                     }`}
