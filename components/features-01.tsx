@@ -28,7 +28,7 @@ export default function Features01() {
       <div className="py-12 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center pb-12">
-            <h2 className="font-mono text-2xl leading-tight sm:text-4xl font-bold text-zinc-900 mb-4">Bridging knowledge gaps on how climate scenarios affect global food security</h2>
+            <h2 className="font-mono text-3xl md:text-3xl font-bold text-zinc-900 pb-6">Bridging knowledge gaps on how climate scenarios affect global food security</h2>
             <p className="text-lg text-zinc-500">To better understand and analyse food security, the Jameel Index measures countries' dependence on global food trade and imports, looking at regional-scale threats to see how they affect trade across diverse geographic regions</p>
           </div>
           <div>

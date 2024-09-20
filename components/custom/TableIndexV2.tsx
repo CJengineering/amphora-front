@@ -435,7 +435,7 @@ export default function TableIndexV2() {
 
           {unpinnedRowsData.map((row) => (
             <React.Fragment key={row.id}>
-              <tr className="hover:bg-gray-10 h-12">
+              <tr className="hover:bg-gray-100 h-12">
                 {row.getVisibleCells().map((cell) => (
                   <td
                     key={cell.id}
