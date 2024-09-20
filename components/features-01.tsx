@@ -63,7 +63,7 @@ export default function Features01() {
                 onClick={(e) => { e.preventDefault(); setTab(3); }}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <div className="font-mono font-semibold text-zinc-900">Bi-lateral trade</div>
+                  <div className="font-mono font-semibold text-zinc-900">Bilateral trade</div>
                   <svg className={`fill-zinc-400 shrink-0 ml-2 ${tab !== 3 ? 'hidden' : ''}`} xmlns="http://www.w3.org/2000/svg" width="10" height="10">
                     <path d="M8.667.186H2.675a.999.999 0 0 0 0 1.998h3.581L.971 7.469a.999.999 0 1 0 1.412 1.412l5.285-5.285v3.58a.999.999 0 1 0 1.998 0V1.186a.999.999 0 0 0-.999-.999Z" />
                   </svg>

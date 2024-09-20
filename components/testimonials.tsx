@@ -59,7 +59,7 @@ export default function Testimonials() {
     },
     {
       image: TracyImage,
-      name: 'Track McVeigh',
+      name: 'Tracy McVeigh',
       user: 'The Guardian',
       link: '#0',
       content: '',

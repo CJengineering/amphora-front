@@ -1,19 +1,24 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '@/public/images/logo.png'
+import JwafsLogo from '@/public/images/J-WAFS.png'
 
 export default function Header() {
   return (
     <header className="absolute top-2 md:top-6 w-full z-30">
       <div className="px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="flex items-center justify-between h-14 border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] rounded-lg px-3">
+          <div className="flex items-center justify-between h-14 px-3">
 
             {/* Site branding */}
             <div className="shrink-0 mr-4">
               {/* Logo */}
-              <Link className="flex items-center justify-center" href="/">
+              
+              {/* <Link className="flex items-center justify-center" href="/">
                 <Image src={Logo} width={24} height={24} alt="Logo" />
+               */}
+              <Link className="flex items-center justify-center" href="/">
+              <p className="font-mono font-bold text-xl uppercase">Jameel Index</p>
               </Link>
             </div>
 
@@ -31,6 +36,7 @@ export default function Header() {
                 <li className="ml-1">
                   <Link className="btn-sm text-zinc-100 bg-blue-600 hover:bg-zinc-800 w-full shadow" href="/score-chart">Score Chart</Link>
                 </li>
+                <li><Image src={JwafsLogo} width={120} height={24} alt="Logo" /></li>
               </ul>
 
             </nav>
