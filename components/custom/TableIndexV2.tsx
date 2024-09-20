@@ -100,7 +100,7 @@ const columns = [
       <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group w-24  ">
         <span>JIS</span>
         <div className="absolute font-normal z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-          <p className=" normal-case">Jameel Index</p>
+          <p className="normal-case font-semibold">Jameel Index Score</p>
           <p className="text-xs normal-case">
             Measures the percentage of a country's food demand met through
             imports.
@@ -124,7 +124,7 @@ const columns = [
         <GlobeAltIcon className="h-4" />
         <span>FID</span>
         <div className="absolute z-20 font-normal top-[-70px] hidden  left-0 w-[300px] group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-          <p className=" normal-case">Food Import Dependency</p>
+          <p className="normal-case font-semibold">Food Import Dependency</p>
           <p className="text-xs normal-case">
             Measures the percentage of a country's food demand met through
             imports.
@@ -144,7 +144,7 @@ const columns = [
         <CircleStackIcon className="h-4" />
         <span>AID</span>
         <div className="absolute z-20 hidden  font-normal group-hover:block top-[-70px] left-0 w-[300px]  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-          <p className=" normal-case">Animal Feed Import Dependency</p>
+          <p className="normal-case font-semibold">Animal Feed Import Dependency</p>
           <p className="text-xs normal-case">
             Tracks the percentage of animal feed demand met by imports.
           </p>
@@ -163,7 +163,7 @@ const columns = [
         <ChartBarIcon className="h-4" />
         <span>FER</span>
         <div className="absolute z-20 top-[-70px] font-normal left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-          <p className=" normal-case">Food Import to Export Ratio</p>
+          <p className="normal-case font-semibold">Food Import to Export Ratio</p>
           <p className="text-xs normal-case">
             Compares the value of food imports to a country's total export
             value.
@@ -184,7 +184,7 @@ const columns = [
 
         <span>kftp</span>
         <div className="absolute font-normal z-20 top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-          <p className="normal-case">Key Food Trade Partners</p>
+          <p className="normal-case font-semibold">Key Food Trade Partners</p>
 
           <p className="text-xs normal-case">
             Counts the number of trade partners supplying 80% of food imports.
@@ -205,7 +205,7 @@ const columns = [
         <ArrowTrendingUpIcon className="h-4" />
         <span>CYV</span>
         <div className="absolute z-20 font-normal top-[-70px] left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-          <p className=" normal-case">Annual Crop Yield Variability</p>
+          <p className="normal-case font-semibold">Annual Crop Yield Variability</p>
           <p className="text-xs normal-case">
             Assesses the annual fluctuation in crop yields for a country.
           </p>
@@ -224,7 +224,7 @@ const columns = [
         <CloudIcon className="h-4" />
         <span> FTI</span>
         <div className="absolute z-20 top-[-70px] font-normal left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-          <p className=" normal-case">
+          <p className="normal-case font-semibold">
             Food Shipment Emission Tax Impact
           </p>
           <p className="text-xs normal-case">

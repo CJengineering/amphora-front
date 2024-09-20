@@ -6,7 +6,7 @@ import Stats from '@/components/stats'
 export default function Hero() {
   return (
     <section className="relative before:absolute before:inset-0 before:h-80 before:pointer-events-none before:bg-gradient-to-b before:from-zinc-100 before:-z-10">
-      <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+      <div className="pt-32 pb-12 md:pt-32 md:pb-20">
         {/* Section content */}
         <div className="px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
@@ -17,7 +17,7 @@ export default function Hero() {
 </h1>
 
       <p className="text-lg sm:text-2xl text-zinc-500 mb-3 sm:mb-8">
-                We measure global food security vulnerability, dependence on global trade, and regional threats impacting food goods' trade.
+                Founded by the Abdul Latif Jameel Water and Food Systems Lab at MIT (J-WAFS) in partnership with the FACT Alliance and Community Jameel, the Jameel Index measures global food security vulnerability, dependence on global trade, and regional threats impacting food goods' trade.
                 </p>
                 
               </div>
