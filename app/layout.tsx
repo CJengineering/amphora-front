@@ -39,6 +39,7 @@ export default function RootLayout({
       >
     
         <GoogleTagManager gtmId="GTM-TNTCZCM4" />
+        <GoogleAnalytics gaId="G-FZC53HN9TW" />
       
         <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
           {children}
