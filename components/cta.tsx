@@ -5,7 +5,7 @@ import Logo from '@/public/images/logo.png'
 export default function Features02() {
   return (
     <section>
-      <div className="py-12 md:py-20">
+      <div className="pt-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="relative max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-xl shadow-md mb-8 relative before:absolute before:-top-12 before:w-52 before:h-52 before:bg-zinc-900 before:opacity-[.08] before:rounded-full before:blur-3xl before:-z-10">
@@ -17,7 +17,7 @@ export default function Features02() {
             <p className="text-lg text-zinc-500 mb-8">The Jameel Index is building a unique platform for modelling global food and trade vulnerability and is actively looking to collaborate with academics institutions and international organisations.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <div>
-                <a className="btn font-mono text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/contact">LEARN MORE</a>
+                <a className="btn font-mono text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/contact">Learn more</a>
               </div>
               {/* <div>
                 <a className="btn text-zinc-600 bg-white hover:text-zinc-900 w-full shadow" href="#0">Get in touch</a>

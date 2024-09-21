@@ -15,21 +15,21 @@ export default function Testimonials() {
     {
       image: FrankImage,
       name: 'Frank Nti',
-      user: 'Agricultural Economist',
+      user: 'U.S. Commodity Futures Trading Commission',
       link: '#0',
       content: '',
     },
     {
       image: GregImage,
       name: 'Greg Sixt',
-      user: 'Project Lead',
+      user: 'MIT J-WAFS',
       link: '#0',
       content: '',
     },
     {
       image: KenImage,
       name: 'Ken Strzepek',
-      user: 'Technical Lead',
+      user: 'MIT J-WAFS',
       link: '#0',
       content: '',
     },
@@ -59,7 +59,7 @@ export default function Testimonials() {
     },
     {
       image: TracyImage,
-      name: 'Track McVeigh',
+      name: 'Tracy McVeigh',
       user: 'The Guardian',
       link: '#0',
       content: '',
@@ -75,64 +75,48 @@ export default function Testimonials() {
 
   return (
     <section className="bg-zinc-800">
-      <div className="py-12 md:py-20">
+      <div className="py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="font-mono text-3xl md:text-4xl font-bold text-zinc-200">Team</h2>
+          <div className="max-w-3xl mx-auto text-center pb-6">
+            <h2 className="font-mono text-3xl md:text-3xl font-bold text-zinc-200">Team</h2>
           </div>
         </div>
-        <div className="max-w-[94rem] mx-auto space-y-6">
-          {/* Row #1 */}
+
+        {/* Testimonials 01: Hidden on mobile, visible from md and up */}
+        <div className="max-w-[94rem] mx-auto space-y-6 pb-6 hidden md:block">
           <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_28%,_black_calc(100%-28%),transparent_100%)] group">
             <div className="flex items-start justify-center md:justify-start [&>div]:mx-3">
-              {/* Items */}
               {testimonials01.map((testimonial, index) => (
                 <Testimonial key={index} testimonial={testimonial}>
                   {testimonial.content}
                 </Testimonial>
               ))}
             </div>
-            {/* Duplicated element for infinite scroll */}
-            {/* <div className="flex items-start justify-center md:justify-start [&>div]:mx-3 animate-infinite-scroll group-hover:[animation-play-state:paused]" aria-hidden="true">
-
-              {testimonials01.map((testimonial, index) => (
-                <Testimonial key={index} testimonial={testimonial}>
-                  {testimonial.content}
-                </Testimonial>
-              ))}
-            </div> */}
           </div>
-          {/* Row #2 */}
+        </div>
+
+        {/* Testimonials 02: Hidden on mobile, visible from md and up */}
+        <div className="max-w-[94rem] mx-auto space-y-6 hidden md:block">
           <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_28%,_black_calc(100%-28%),transparent_100%)] group">
             <div className="flex items-start justify-center md:justify-start [&>div]:mx-3">
-              {/* Items */}
               {testimonials02.map((testimonial, index) => (
                 <Testimonial key={index} testimonial={testimonial}>
                   {testimonial.content}
                 </Testimonial>
               ))}
-            </div>
-            {/* Duplicated element for infinite scroll */}
-            {/* <div className="flex items-start justify-center md:justify-start [&>div]:mx-3 animate-infinite-scroll-inverse group-hover:[animation-play-state:paused] [animation-delay:-7.5s]" aria-hidden="true">
-
-              {testimonials02.map((testimonial, index) => (
-                <Testimonial key={index} testimonial={testimonial}>
-                  {testimonial.content}
-                </Testimonial>
-              ))}
-            </div> */}
-            {/* <div className="flex items-start justify-center md:justify-start [&>div]:mx-3 animate-infinite-scroll group-hover:[animation-play-state:paused]"> */}
-            {/* <div className="flex items-start justify-center md:justify-start [&>div]:mx-3 animate-infinite-scroll-inverse group-hover:[animation-play-state:paused] [animation-delay:-7.5s]"> */}
-          </div >
-          <div className="relative max-w-3xl mx-auto text-center pt-3 md:pt-6">
-            <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <div>
-                <a className="btn font-mono text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/team">MEET THE TEAM</a>
-              </div>
             </div>
           </div>
-        </div >
-      </div >
-    </section >
+        </div>
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:hidden"><p className="text-lg text-center text-gray-200">The Jameel Index was developed and built by a team of global experts in food systems, agriculture, nutrition and economics from some of the world's leading academic institutions and international organisations. </p></div>
+        <div className="relative max-w-3xl mx-auto text-center pt-12">
+          <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div>
+              <a className="btn font-mono text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/team">Meet the team</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }

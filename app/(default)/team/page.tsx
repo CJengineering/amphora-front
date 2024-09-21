@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
             {/* Page header */}
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-mono text-4xl md:text-5xl font-bold text-black pb-4">
+              <h1 className="font-mono text-2xl md:text-4xl font-bold text-black pb-4">
                 Team</h1>
               <p className="text-lg text-zinc-500">The Jameel Index was developed and built by a team of global experts in food systems, agriculture, nutrition and economics from some of the world's leading academic institutions and international organisations. </p>
             </div>

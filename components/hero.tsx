@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="pt-32 pb-12 md:pt-32 md:pb-20">
         {/* Section content */}
         <div className="px-4 sm:px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
               <div className="text-center pb-12 md:pb-0">
               <h1 className="font-mono text-4xl sm:text-7xl font-bold text-black pb-4 leading-none">
   <span className="block">JAMEEL INDEX</span>
@@ -17,7 +17,7 @@ export default function Hero() {
 </h1>
 
       <p className="text-lg sm:text-2xl text-zinc-500 mb-3 sm:mb-8">
-                Founded by the Abdul Latif Jameel Water and Food Systems Lab at MIT (MIT J-WAFS) in partnership with the FACT Alliance and Community Jameel, the Jameel Index measures global food security vulnerability, dependence on global trade, and regional threats impacting food goods' trade.
+                Founded by the MIT Abdul Latif Jameel Water and Food Systems Lab (MIT J-WAFS) in partnership with the FACT Alliance and Community Jameel, the Jameel Index measures global food security vulnerability, dependence on global trade, and regional threats impacting food goods' trade.
                 </p>
                 
               </div>
@@ -32,7 +32,7 @@ export default function Hero() {
           <div className="relative max-w-3xl mx-auto text-center pt-3 md:pt-6">
             <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <div>
-                <a className="btn text-base sm:text-2xl font-mono text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/score-chart">EXPLORE</a>
+                <a className="btn text-base sm:text-2xl font-mono text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/score-chart">Explore</a>
               </div>
             </div>
           </div>
