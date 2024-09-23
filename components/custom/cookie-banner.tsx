@@ -4,24 +4,24 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function CookieBanner() {
-  // Add 'indecide' as the initial state, so the banner shows if no decision has been made
-  const [cookieConsent, setCookieConsent] = useState<"indecide" | boolean>("indecide");
+  // Add 'undecided' as the initial state, so the banner shows if no decision has been made
+  const [cookieConsent, setCookieConsent] = useState<"undecided" | boolean>("undecided");
 
   useEffect(() => {
-    const storedCookieConsent = getLocalStorage("cookie_consent", "indecide");
+    const storedCookieConsent = getLocalStorage("cookie_consent", "undecided");
     
-    // Ensure the stored value is 'true', 'false', or 'indecide'
+    // Ensure the stored value is 'true', 'false', or 'undecided'
     if (storedCookieConsent === "true") {
       setCookieConsent(true);
     } else if (storedCookieConsent === "false") {
       setCookieConsent(false);
     } else {
-      setCookieConsent("indecide"); // if no stored consent, set to 'indecide'
+      setCookieConsent("undecided"); // if no stored consent, set to 'undecided'
     }
   }, []);
 
   useEffect(() => {
-    if (cookieConsent !== "indecide") {
+    if (cookieConsent !== "undecided") {
       const newValue = cookieConsent ? "granted" : "denied";
 
       // Update Google Analytics consent
@@ -35,19 +35,19 @@ export default function CookieBanner() {
   }, [cookieConsent]);
 
   // If user hasn't made a decision yet, show the banner
-  if (cookieConsent === "indecide") {
+  if (cookieConsent === "undecided") {
     return (
       <div
         className={`my-10 mx-auto max-w-max md:max-w-screen-sm
-                  fixed bottom-0 left-0 right-0 
+                  fixed bottom-0 left-0 right-0 md:right-12
                   flex px-3 md:px-4 py-3 justify-between items-center flex-col sm:flex-row gap-4  
-                  bg-gray-700 rounded-lg shadow z-50
+                  bg-gray-700 z-50
                   `}
       >
         <div className="text-center text-white">
           <Link href="/info/cookies">
-            <p>
-              We use <span className="font-bold text-sky-400">cookies</span> on
+            <p className="text-sm">
+              We use <span className="font-bold text-sky-400 text-sm">cookies</span> on
               our site.
             </p>
           </Link>
@@ -55,13 +55,13 @@ export default function CookieBanner() {
 
         <div className="flex gap-2">
           <button
-            className="px-5 py-2 text-gray-300 rounded-md border-gray-900"
+            className="px-5 py-2 text-gray-300 border-gray-900 text-sm"
             onClick={() => setCookieConsent(false)}
           >
             Decline
           </button>
           <button
-            className="bg-gray-900 px-5 py-2 text-white-200 rounded-lg text-white"
+            className="bg-gray-900 px-5 py-2 text-white-200 text-white text-sm"
             onClick={() => setCookieConsent(true)}
           >
             Allow Cookies
