@@ -5,6 +5,7 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import GoogleAnalyticsCustom from "@/components/custom/google-analytics";
 import Head from "next/head";
 import Script from "next/script";
+import CookieBanner from "@/components/custom/cookie-banner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -44,6 +45,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
           {children}
         </div>
+        <CookieBanner />
       </body>
     </html>
   );
