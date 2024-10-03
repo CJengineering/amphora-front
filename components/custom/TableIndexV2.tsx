@@ -98,7 +98,7 @@ const columns = [
   columnHelper.accessor("overallScore", {
     header: () => (
       <div className="relative font-mono uppercase items-center space-x-2 hidden md:flex group w-24  ">
-        <span>JIS</span>
+        <span>JXS</span>
         <div className="absolute font-normal z-20 top-[-70px] hidden  left-0 w-[300px] group-hover:block  p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
           <p className="normal-case font-semibold">Jameel Index Score</p>
           <p className="text-xs normal-case">
