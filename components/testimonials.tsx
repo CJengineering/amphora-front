@@ -15,7 +15,7 @@ export default function Testimonials() {
     {
       image: FrankImage,
       name: 'Frank Nti',
-      user: 'Commodities research expert',
+      user: 'Agricultural Economist',
       link: '#0',
       content: '',
     },
