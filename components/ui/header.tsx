@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '@/public/images/logo.png'
 import JwafsLogo from '@/public/images/J-WAFS.png'
+import factLogo from '@/public/images/food-climate-alliance-logo-gold.png'
 
 export default function Header() {
   return (
@@ -37,6 +38,7 @@ export default function Header() {
                   <Link className="btn-sm text-zinc-100 bg-blue-600 hover:bg-zinc-800 w-full shadow" href="/score-chart">Score Chart</Link>
                 </li>
                 <li className="hidden lg:block"><Image src={JwafsLogo} width={120} height={24} alt="Logo" /></li>
+                <li className="hidden lg:block"><Image src={factLogo} width={120} height={24} alt="Logo" /></li>
               </ul>
 
             </nav>
