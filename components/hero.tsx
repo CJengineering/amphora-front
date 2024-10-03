@@ -16,10 +16,10 @@ export default function Hero() {
         {/* Section content */}
         <div className="px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
-          <div className="flex mx-auto items-center">
+          {/* <div className="flex mx-auto items-center">
           <Image src={JwafsLogo} width={120} height={24} alt="Logo" className="h-auto" />
           <Image src={factLogo} width={120} height={24} alt="Logo" className="h-auto" />
-          </div>
+          </div> */}
               <div className="text-center pb-12 md:pb-0">
               <h1 className="font-mono text-4xl sm:text-7xl font-bold text-black pb-4 leading-none">
                 <span className="block">JAMEEL INDEX</span>
