@@ -15,7 +15,7 @@ export default function Testimonials() {
     {
       image: FrankImage,
       name: 'Frank Nti',
-      user: 'U.S. Commodity Futures Trading Commission',
+      user: 'Commodities research expert',
       link: '#0',
       content: '',
     },
