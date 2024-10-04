@@ -29,12 +29,12 @@ export default function Header() {
               {/* Desktop sign in links */}
               <ul className="flex grow justify-end flex-wrap items-center">
                 <li>
-                  <Link className="text-sm font-medium text-zinc-500 hover:text-zinc-900 px-3 lg:px-5 py-2 flex items-center transition" href="/team">Team</Link>
+                  <Link className="text-sm font-medium text-zinc-500 hover:text-zinc-900 px-3 lg:px-5 py-2 flex items-center transition mr-0 lg:mr-5" href="/team">Team</Link>
                 </li>
                 <li>
                   {/* <Link className="text-sm font-medium text-zinc-500 hover:text-zinc-900 px-3 lg:px-5 py-2 flex items-center transition" href="/contact">Contact</Link> */}
                 </li>
-                <li className="ml-1">
+                <li className="ml-1 mr-0 lg:mr-5">
                   <Link className="btn-sm text-zinc-100 bg-blue-600 hover:bg-zinc-800 w-full shadow" href="/score-chart">Score Chart</Link>
                 </li>
                 <li className="hidden lg:block"><Image src={JwafsLogo} width={120} height={24} alt="Logo" /></li>

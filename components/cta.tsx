@@ -8,7 +8,7 @@ export default function Features02() {
       <div className="pt-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="relative max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-xl shadow-md mb-8 relative before:absolute before:-top-12 before:w-52 before:h-52 before:bg-zinc-900 before:opacity-[.08] before:rounded-full before:blur-3xl before:-z-10">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-xl shadow-md mb-8 relative ">
               <Link href="/">
                 <Image src={Logo} width={60} height={60} alt="Logo" />
               </Link>
