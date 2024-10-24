@@ -81,8 +81,8 @@ const checkColumnName = (name: string) => {
     "food Im" ||
     "forExch" ||
     "supplyReliab" ||
-    "supplyRoboost" ||
-    "climatePolicy"
+    "supplyRoboost" 
+
   ) {
     return "hidden ";
   }
@@ -218,28 +218,28 @@ const columns = [
       </div>
     ),
   }),
-  columnHelper.accessor("climatePolicy", {
-    header: () => (
-      <div className="relative flex items-center  uppercase font-mono space-x-2 group w-24">
-        <CloudIcon className="h-4" />
-        <span> FTI</span>
-        <div className="absolute z-20 top-[-70px] font-normal left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
-          <p className="normal-case font-semibold">
-            Food Shipment Emission Tax Impact
-          </p>
-          <p className="text-xs normal-case">
-            Evaluates the effect of greenhouse gas emission taxes on food
-            shipment costs.
-          </p>
-        </div>
-      </div>
-    ),
-    cell: (info) => (
-      <div className={`${getBgColor(info.getValue())} p-4`}>
-        {getRiskLevel(info.getValue())}
-      </div>
-    ),
-  }),
+  // columnHelper.accessor("climatePolicy", {
+  //   header: () => (
+  //     <div className="relative flex items-center  uppercase font-mono space-x-2 group w-24">
+  //       <CloudIcon className="h-4" />
+  //       <span> FTI</span>
+  //       <div className="absolute z-20 top-[-70px] font-normal left-0 w-[300px] hidden group-hover:block p-2 bg-gray-100 text-sm border rounded-md shadow-md normal-case">
+  //         <p className="normal-case font-semibold">
+  //           Food Shipment Emission Tax Impact
+  //         </p>
+  //         <p className="text-xs normal-case">
+  //           Evaluates the effect of greenhouse gas emission taxes on food
+  //           shipment costs.
+  //         </p>
+  //       </div>
+  //     </div>
+  //   ),
+  //   cell: (info) => (
+  //     <div className={`${getBgColor(info.getValue())} p-4`}>
+  //       {getRiskLevel(info.getValue())}
+  //     </div>
+  //   ),
+  // }),
 ];
 
 export default function TableIndexV2() {
@@ -515,11 +515,7 @@ export default function TableIndexV2() {
                           value: getRiskLevel(row.original.supplyRoboost),
                           bgColor: getBgColor(row.original.supplyRoboost),
                         },
-                        {
-                          header: "Food Shipment Emission Tax Impact",
-                          value: getRiskLevel(row.original.climatePolicy),
-                          bgColor: getBgColor(row.original.climatePolicy),
-                        },
+                     
                       ].map((item, index) => (
                         <div className="flex border w-full" key={index}>
                           <div className="flex items-center w-2/3 pl-2 h-12">

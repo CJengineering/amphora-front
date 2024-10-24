@@ -15,7 +15,7 @@ export const mapperRawToCalculatedCountries = (
     let climatePolicy = new Decimal(country.climatePolicy);
 
     // Calculate total sum using Decimal.js for precision
-    let totalSum = foodIm.plus(feedIm).plus(forExch).plus(supplyRoboost).plus(climatePolicy).plus(supplyReliability);
+    let totalSum = foodIm.plus(feedIm).plus(forExch).plus(supplyRoboost).plus(supplyReliability);
 
     // Check if the total sum equals 21 and modify it if necessary
     if (totalSum.equals(21)) {
