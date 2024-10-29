@@ -6,6 +6,7 @@ import FeatureImage04 from '@/public/images/UAEU.png'
 import FeatureImage05 from '@/public/images/CSU.png'
 import FeatureImage06 from '@/public/images/food-climate-alliance-logo-gold.png'
 import FeatureImage07 from '@/public/images/CJ.png'
+import FeatureImage08 from '@/public/images/EIAR_logo.png'
 
 export default function Features02() {
   return (
@@ -43,12 +44,15 @@ export default function Features02() {
 </div>
 
           {/* Third Row */}
-          <div className="max-w-xs mx-auto sm:max-w-none grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-4">
+          <div className="max-w-xs mx-auto sm:max-w-none grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-4">
             <div className="flex justify-center items-center">
               <Image className="w-72 h-auto object-contain" src={FeatureImage05} alt="Colorado State University logo" />
             </div>
             <div className="flex justify-center items-center">
               <Image className="w-72 h-auto object-contain" src={FeatureImage07} alt="Community Jameel logo" />
+            </div>
+            <div className="flex justify-center items-center">
+              <Image className="w-72 h-auto object-contain" src={FeatureImage08} alt="Community Jameel logo" />
             </div>
           </div>
         </div>
