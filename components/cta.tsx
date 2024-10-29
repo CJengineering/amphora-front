@@ -8,13 +8,13 @@ export default function Features02() {
       <div className="pt-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="relative max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-xl shadow-md mb-8 relative ">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-xl border mb-8 relative ">
               <Link href="/">
                 <Image src={Logo} width={60} height={60} alt="Logo" />
               </Link>
             </div>
-            <h2 className="font-mono text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Join the Jameel Index</h2>
-            <p className="text-lg text-zinc-500 mb-8">The Jameel Index is building a unique platform for modelling global food and trade vulnerability and is actively looking to collaborate with academics institutions and international organisations.</p>
+            <h2 className="font-mono text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Join us!</h2>
+            <p className="text-lg text-zinc-500 mb-8">For more information on the Jameel Index</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <div>
                 <a className="btn font-mono text-zinc-100 bg-blue-500 hover:bg-blue-900 w-full shadow" href="/contact">Learn more</a>

@@ -26,7 +26,7 @@ export default function Hero() {
                 <span className="font-mono text-2xl mt-0 block">FOR FOOD TRADE AND VULNERABILITY</span>
               </h1>
             <p className="text-lg sm:text-2xl text-zinc-500 mb-3 sm:mb-8">
-              Founded by the MIT Abdul Latif Jameel Water and Food Systems Lab (MIT J-WAFS) in partnership with the FACT Alliance and Community Jameel, the Jameel Index measures global food security vulnerability, dependence on global trade, and regional threats impacting food goods' trade.
+              Founded by the MIT Abdul Latif Jameel Water and Food Systems Lab (MIT J-WAFS) in partnership with the FACT Alliance and Community Jameel, the Jameel Index measures key aspects of global food security that are dependent on food trade and the global change threats impacting food trade.
             </p>
           </div>
           </div>
