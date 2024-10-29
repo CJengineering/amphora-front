@@ -7,6 +7,7 @@ import FeatureImage05 from '@/public/images/CSU.png'
 import FeatureImage06 from '@/public/images/food-climate-alliance-logo-gold.png'
 import FeatureImage07 from '@/public/images/CJ.png'
 import FeatureImage08 from '@/public/images/EIAR_logo.png'
+import FeatureImage09 from '@/public/images/ifpri_cgiar.png'
 
 export default function Features02() {
   return (
@@ -32,7 +33,7 @@ export default function Features02() {
    {/* Second Row */}
 <div className="max-w-xs mx-auto sm:max-w-none grid grid-cols-3 md:grid-cols-3 sm:gap-4 lg:gap-4">
   <div className="flex justify-center items-center">
-    <Image className="w-72 h-auto object-contain" src={FeatureImage02} alt="IFPRI logo" />
+    <Image className="w-72 h-auto object-contain" src={FeatureImage09} alt="IFPRI logo" />
   </div>
   <div className="flex justify-center items-center">
     {/* Make Oxford logo full width on mobile and keep original size on larger screens */}
@@ -52,7 +53,7 @@ export default function Features02() {
               <Image className="w-72 h-auto object-contain" src={FeatureImage07} alt="Community Jameel logo" />
             </div>
             <div className="flex justify-center items-center">
-              <Image className="w-72 h-auto object-contain" src={FeatureImage08} alt="Community Jameel logo" />
+              <Image className="w-72 h-auto object-contain" src={FeatureImage08} alt="EIAR logo" />
             </div>
           </div>
         </div>
