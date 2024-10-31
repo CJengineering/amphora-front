@@ -3,9 +3,10 @@ import TableIndexV2 from "@/components/custom/TableIndexV2";
 import TESTTableComponent from "@/components/test-components/TestTableComponent";
 import { Metadata } from "next";
 import React from "react";
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Score chart | Jameel Index for Food Trade and Vulnerability',
   description: 'Description of the score chart page',
+  ogImage: 'https://storage.googleapis.com/cj-tech-381914-goalertbucket/JAMEEL_INDEX_OG.jpg',
 }
 
 

@@ -22,9 +22,10 @@ import WillImage from '@/public/images/experts/Will-Masters.jpg'
 import ChrisImage from '@/public/images/research-team/chris-maynard.jpg'
 import ShigieSyang from '@/public/images/experts/Shigie_Syang.jpg'
 import { Metadata } from 'next'
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Team | Jameel Index for Food Trade and Vulnerability',
   description: 'Description of the team page',
+  ogImage: 'https://storage.googleapis.com/cj-tech-381914-goalertbucket/JAMEEL_INDEX_OG.jpg',
 }
 
 

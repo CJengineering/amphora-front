@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Contact | Jameel Index for Food and Trade Vulnerability',
   description: 'Get in touch with the Jameel Index team to learn more about our data, methodology, and how to use our data for your research.',
+  ogImage: 'https://storage.googleapis.com/cj-tech-381914-goalertbucket/JAMEEL_INDEX_OG.jpg',
 }
 
 import ContactForm from '@/components/custom/contact-form'

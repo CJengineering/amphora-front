@@ -2,9 +2,10 @@ import Accordion from "@/components/accordion";
 import MetaIndicatorList from "@/components/test-components/MetaIndicatorList";
 import { Metadata } from "next";
 import React from "react";
-export const metadata: Metadata = {
+export const metadata = {
     title: 'Technical | Jameel Index for Food Trade and Vulnerability',
     description: 'Description of the technical page',
+    ogImage: 'https://storage.googleapis.com/cj-tech-381914-goalertbucket/JAMEEL_INDEX_OG.jpg',
   }
 
 
