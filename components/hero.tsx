@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import HeroImage from '@/public/images/JAMEEL_INDEX_HERO_IMAGE.png'
+import HeroImage from '@/public/images/JAMEEL_INDEX_HERO_IMAGE_FINAL.png'
 import Stats from '@/components/stats'
 import JwafsLogo from '@/public/images/J-WAFS.png'
 import factLogo from '@/public/images/food-climate-alliance-logo-gold.png'
